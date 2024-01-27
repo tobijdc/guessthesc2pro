@@ -5,11 +5,16 @@ copyright = "Tobias Ibounig"
 paginate = 10
 languageCode = "en"
 theme = "tailwind"
+enableRobotsTXT = true
+enableEmoji = true
 
 [params]
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
+
+  showReadingTime = false
+  toc = false
 
   [params.header]
     logo = "logo.webp"
@@ -21,18 +26,12 @@ theme = "tailwind"
 [menu]
 
   [[menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "/posts"
-    weight = 0
-
-  [[menu.main]]
     identifier = "about"
     name = "About"
     pageRef = "/about"
-    weight = 10
+    weight = 0
 
-[taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
+#[taxonomies]
+#category = "categories"
+#tag = "tags"
+#series = "series"
