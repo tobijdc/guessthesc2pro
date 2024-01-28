@@ -1,6 +1,3 @@
-<div id="player-display" onclick="playersList()">
-    here
-</div>
 <div id="countdown-display" onclick="playersList()">
     <div id="number-of-tries">5</div> tries left.
 </div>
@@ -8,13 +5,18 @@
     <input id="player_tag" name="player_tag" type="text" placeholder="guess here" onKeyUp="search()" />
     <ul id="search-result"></ul>
 </div>
-<button name="submit" onclick="guess(document.getElementById('rank').value)">
+<button name="submit" onclick="guess(document.getElementById('player_tag').value)">
     Guess
 </button>
 <button name="reset" onclick="reset()">
     Reset Game
 </button>
 
-<div id="result-display">
+<table id="result-display" cellpadding="0" cellspacing="0" border="0">
+</table>
 
+<br/>
+
+<div id="player-display" class="column-text" onclick="playersList()">
+    Click here to load Player List.
 </div>

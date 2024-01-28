@@ -602,49 +602,117 @@ var number_of_guesses = 5;
 function reset() {
     main_player = players[Math.floor(Math.random() * players.length)];
     number_of_guesses = 5;
+    document.getElementById('number-of-tries').innerHTML = number_of_guesses;
     document.getElementById('result-display').innerHTML = "";
+}
+
+function elementSelectCallback(event) {
+    document.getElementById('search-result').innerHTML = "";
+    document.getElementById('player_tag').value = this.innerText
+}
+
+function renderListElementWithCallback(text) {
+    var element = document.createElement("li");
+    element.innerText = text;
+    element.addEventListener("click", elementSelectCallback);
+    return element;
 }
 
 function search() {
     const input = document.getElementById('player_tag').value;
-    console.log(input);
-    const result = fuse.search(input);
+    //console.log(input);
+    const result = fuse.search(input, {limit: 10});
     const tags = result.map(function (item) { return players[item["refIndex"]].tag; });
-    var suggestions = "";
+    var suggestions = document.getElementById('search-result');
+    suggestions.innerHTML = "";
     for (i = 0; i < tags.length; i++) {
-        suggestions += '<li>' + tags[i] + '</li>';
+        suggestions.appendChild(renderListElementWithCallback(tags[i]));
     }
-    document.getElementById('search-result').innerHTML = suggestions;
+}
+
+function formatActive(text) {
+    if (text === "NULL") {
+        return "Inactive";
+    } else {
+        return "Active";
+    }
+}
+
+function birthdayEmptyOrNull(player) {
+    return player.birthday == "NULL" || player.birthday == "";
+}
+
+function beforeOrAfter(guess, actual) {
+    if (guess > actual) {
+        return "⬇️";
+    } else {
+        return "⬆️";
+    }
 }
 
 function stats(guess, actual) {
-    var result = "<b>" + guess.tag + "</b><br/>";
+    var result = "<tr><td><b>" + guess.tag + "</b></td>";
     if (guess.race == actual.race) {
-        result += "race correct <br/>"
+        result += "<td>🟢 " + guess.race + "</td>"
     } else {
-        result += "race wrong <br/>"
+        result += "<td>🔴 " + guess.race + "</td>"
+    }
+    if (guess.country == actual.country) {
+        result += "<td>🟢 " + guess.country + "</td>"
+    } else {
+        result += "<td>🔴 " + guess.country + "</td>"
     }
     if (guess.rating == actual.rating) {
-        result += "rating same <br/>"
+        result += "<td>rating 🟢</td>"
     } else if (guess.rating < actual.rating) {
-        result += "rating ⬆️ <br/>"
+        result += "<td>rating ⬆️</td>"
     } else {
-        result += "rating ⬇️<br/>"
+        result += "<td>rating ⬇️</td>"
     }
-    document.getElementById('result-display').innerHTML = result;
+    if (!birthdayEmptyOrNull(guess) && !birthdayEmptyOrNull(actual)) {
+        const guessBirthday = new Date(guess.birthday);
+        const actualBirthday = new Date(actual.birthday);
+        if (guessBirthday.getFullYear() == actualBirthday.getFullYear() && guessBirthday.getMonth() == actualBirthday.getMonth()) {
+            result += "<td>🟢 " + guess.birthday + "</td>"
+        } else if (guessBirthday.getFullYear() == actualBirthday.getFullYear()) {
+            result += "<td>🟡" + beforeOrAfter(guessBirthday, actualBirthday) + " " + guess.birthday + "</td>"
+        } else {
+            result += "<td>🔴" + beforeOrAfter(guessBirthday, actualBirthday) + " " + guess.birthday + "</td>"
+        }
+    }
+    if (formatActive(guess.position) == formatActive(actual.position)) {
+        result += "<td>🟢" + formatActive(guess.position) + "</td>";
+     } else {
+         result += "<td>🔴" + formatActive(guess.position) + "</td>";
+     }
+    result += "</tr>"
+
+    document.getElementById('result-display').innerHTML = result + document.getElementById('result-display').innerHTML;
 }
 
-function guess(index) {
+function guess(tag) {
+    const foundPlayers = players.filter(x => x.tag === tag);
+    if (foundPlayers.length <= 0) {
+        alert('not found, try again!');
+        return;
+    } else if (foundPlayers.length > 1) {
+        alert('error: multiple players found!');
+        return;
+    }
+
     number_of_guesses--;
     document.getElementById('number-of-tries').innerHTML = number_of_guesses;
-    if (players[index].id == main_player.id) {
-        document.getElementById('result-display').innerHTML = "winwinwin <br /><b>" + main_player.tag;
-        alert('winwinwin');
+    if (foundPlayers[0].id == main_player.id) {
+        stats(foundPlayers[0], main_player);
+        document.getElementById('result-display').innerHTML = "<tr>You won!</tr>" + document.getElementById('result-display').innerHTML
+        alert('You won! It was: ' + main_player.tag);
         return;
     } else {
-        stats(players[index], main_player);
+        stats(foundPlayers[0], main_player);
     }
     if (number_of_guesses <= 0) {
+        stats(main_player, main_player);
+        document.getElementById('result-display').innerHTML = "<tr>You lost!</tr>" + document.getElementById('result-display').innerHTML
         alert('sorry you lost. Target player was: ' + main_player.tag)
     }
 }
