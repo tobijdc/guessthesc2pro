@@ -129,3 +129,10 @@ function guess(index) {
     }
 }
 
+function playersList() {
+    var result = "";
+    for (i = 0; i < players.length; i++) {
+        result += i + ": " + players[i].tag + "<br/>";
+    }
+    document.getElementById('player-display').innerHTML = result;
+}
