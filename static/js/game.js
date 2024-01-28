@@ -574,6 +574,28 @@ const players = [
     }
 ]
 
+const fuseOptions = {
+    // isCaseSensitive: false,
+    // includeScore: false,
+    // shouldSort: true,
+    // includeMatches: false,
+    // findAllMatches: false,
+    // minMatchCharLength: 1,
+    // location: 0,
+    threshold: 0.3,
+    // distance: 100,
+    // useExtendedSearch: false,
+    // ignoreLocation: false,
+    // ignoreFieldNorm: false,
+    // fieldNormWeight: 1,
+    keys: [
+        "tag"
+    ]
+};
+
+
+const fuse = new Fuse(JSON.parse(JSON.stringify(players)), fuseOptions);
+
 var main_player = players[Math.floor(Math.random() * players.length)];
 var number_of_guesses = 5;
 
@@ -581,6 +603,18 @@ function reset() {
     main_player = players[Math.floor(Math.random() * players.length)];
     number_of_guesses = 5;
     document.getElementById('result-display').innerHTML = "";
+}
+
+function search() {
+    const input = document.getElementById('player_tag').value;
+    console.log(input);
+    const result = fuse.search(input);
+    const tags = result.map(function (item) { return players[item["refIndex"]].tag; });
+    var suggestions = "";
+    for (i = 0; i < tags.length; i++) {
+        suggestions += '<li>' + tags[i] + '</li>';
+    }
+    document.getElementById('search-result').innerHTML = suggestions;
 }
 
 function stats(guess, actual) {
