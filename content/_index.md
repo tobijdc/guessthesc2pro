@@ -5,4 +5,4 @@ author = "Tobijdc"
 draft = false
 +++
 
-teeeeeeeeeeest
+Guess the SC2 Player. You have 5 chances.

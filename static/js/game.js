@@ -602,7 +602,7 @@ var number_of_guesses = 5;
 function reset() {
     main_player = players[Math.floor(Math.random() * players.length)];
     number_of_guesses = 5;
-    document.getElementById('number-of-tries').innerHTML = number_of_guesses;
+    document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
     document.getElementById('result-display').innerHTML = "";
 }
 
@@ -701,7 +701,7 @@ function guess(tag) {
     }
 
     number_of_guesses--;
-    document.getElementById('number-of-tries').innerHTML = number_of_guesses;
+    document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
     if (foundPlayers[0].id == main_player.id) {
         stats(foundPlayers[0], main_player);
         document.getElementById('result-display').innerHTML = "<tr>You won!</tr>" + document.getElementById('result-display').innerHTML
@@ -713,6 +713,7 @@ function guess(tag) {
     if (number_of_guesses <= 0) {
         stats(main_player, main_player);
         document.getElementById('result-display').innerHTML = "<tr>You lost!</tr>" + document.getElementById('result-display').innerHTML
+        document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
         alert('sorry you lost. Target player was: ' + main_player.tag)
     }
 }
