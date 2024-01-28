@@ -5587,8 +5587,10 @@ function stats(guess, actual) {
     }
     if (guess.country == actual.country) {
         result += "<td>🟢 " + guess.country + "</td>"
-    } else {
+    } else if (guess.country == "KR") {
         result += "<td>🔴 " + guess.country + "</td>"
+    } else if (guess.country != "KR") {
+        result += "<td>🟡 " + guess.country + "</td>"
     }
     if (guess.rating == actual.rating) {
         result += "<td>rating 🟢</td>"
@@ -5606,6 +5608,10 @@ function stats(guess, actual) {
             result += "<td>🟡" + beforeOrAfter(guessBirthday, actualBirthday) + " " + guess.birthday + "</td>"
         } else {
             result += "<td>🔴" + beforeOrAfter(guessBirthday, actualBirthday) + " " + guess.birthday + "</td>"
+        }
+    } else {
+        if (!birthdayEmptyOrNull(actual) && birthdayEmptyOrNull(guess)) {
+            result += "<td>🤷‍♂️</td>"
         }
     }
     if (formatActive(guess.position) == formatActive(actual.position)) {
