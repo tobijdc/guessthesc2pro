@@ -1,5 +1,5 @@
 
-var players = [
+const players = [
     {
         "id": 485,
         "tag": "Serral",
@@ -574,9 +574,14 @@ var players = [
     }
 ]
 
-var today = new Date();
-var target = players[Math.floor(Math.random() * players.length)];
+var main_player = players[Math.floor(Math.random() * players.length)];
 var number_of_guesses = 5;
+
+function reset() {
+    main_player = players[Math.floor(Math.random() * players.length)];
+    number_of_guesses = 5;
+    document.getElementById('result-display').innerHTML = "";
+}
 
 function stats(guess, actual) {
     var result = "<b>" + guess.tag + "</b><br/>";
@@ -598,15 +603,15 @@ function stats(guess, actual) {
 function guess(index) {
     number_of_guesses--;
     document.getElementById('number-of-tries').innerHTML = number_of_guesses;
-    if (players[index].id == target.id) {
-        document.getElementById('result-display').innerHTML = "winwinwin <br /><b>" + target.tag;
+    if (players[index].id == main_player.id) {
+        document.getElementById('result-display').innerHTML = "winwinwin <br /><b>" + main_player.tag;
         alert('winwinwin');
         return;
     } else {
-        stats(players[index], target);
+        stats(players[index], main_player);
     }
     if (number_of_guesses <= 0) {
-        alert('sorry you lost. Target player was: ' + target.tag)
+        alert('sorry you lost. Target player was: ' + main_player.tag)
     }
 }
 

@@ -4,9 +4,12 @@ author = "tobijdc"
 copyright = "Tobias Ibounig"
 paginate = 10
 languageCode = "en"
-theme = "tailwind"
+theme = "anubis"
 enableRobotsTXT = true
 enableEmoji = true
+
+disqusShortname = ""
+googleAnalytics = ""
 
 [params]
   # dir name of your blog content (default is `content/posts`).

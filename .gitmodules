@@ -1,3 +1,9 @@
 [submodule "themes/tailwind"]
 	path = themes/tailwind
 	url = https://github.com/tomowang/hugo-theme-tailwind.git
+[submodule "themes/blank"]
+	path = themes/blank
+	url = https://github.com/vimux/blank
+[submodule "themes/anubis"]
+	path = themes/anubis
+	url = https://github.com/Mitrichius/hugo-theme-anubis.git
