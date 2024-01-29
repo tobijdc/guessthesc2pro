@@ -3673,6 +3673,12 @@ function birthdayEmptyOrNull(player) {
     return player.birthday == "NULL" || player.birthday == "";
 }
 
+function _calculateAge(birthday) {
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
 function beforeOrAfter(guess, actual) {
     if (guess > actual) {
         return "⏬";
@@ -3714,14 +3720,14 @@ function stats(guess, actual) {
         result += "<td class=\"red\">" + guess.rating + beforeOrAfter(guess.rating, actual.rating) + "</td>"
     }
     if (!birthdayEmptyOrNull(guess) && !birthdayEmptyOrNull(actual)) {
-        const guessBirthday = new Date(guess.birthday);
-        const actualBirthday = new Date(actual.birthday);
-        if (guessBirthday.getFullYear() == actualBirthday.getFullYear() && guessBirthday.getMonth() == actualBirthday.getMonth()) {
-            result += "<td class=\"green\">" + guess.birthday + "</td>"
-        } else if (guessBirthday.getFullYear() == actualBirthday.getFullYear()) {
-            result += "<td class=\"yellow\">" + guess.birthday + beforeOrAfter(guessBirthday, actualBirthday) + "</td>"
+        const guessAge = _calculateAge(new Date(guess.birthday));
+        const actualAge = _calculateAge(new Date(actual.birthday));
+        if (guessAge == actualAge) {
+            result += "<td class=\"green\">" + guessAge + "</td>"
+        } else if (Math.abs(guessAge - actualAge) <= 1) {
+            result += "<td class=\"yellow\">" + guessAge + beforeOrAfter(guessAge, actualAge) + "</td>"
         } else {
-            result += "<td class=\"red\">" + guess.birthday + beforeOrAfter(guessBirthday, actualBirthday) + "</td>"
+            result += "<td class=\"red\">" + guessAge + beforeOrAfter(guessAge, actualAge) + "</td>"
         }
     } else {
         result += "<td>🤷‍♂️</td>"
