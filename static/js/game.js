@@ -3626,12 +3626,13 @@ const fuse = new Fuse(JSON.parse(JSON.stringify(players)), fuseOptions);
 
 var main_player = players[Math.floor(Math.random() * players.length)];
 var number_of_guesses = 5;
+const earnings_format = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
 
 function reset() {
     main_player = players[Math.floor(Math.random() * players.length)];
     number_of_guesses = 5;
     document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
-    document.getElementById('result-display').innerHTML = "";
+    document.getElementById('result-display').innerHTML = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
 }
 
 function elementSelectCallback(event) {
@@ -3660,9 +3661,9 @@ function search() {
 
 function formatActive(text) {
     if (text === "NULL") {
-        return "Inactive";
+        return "🛏️";
     } else {
-        return "Active";
+        return "🎮";
     }
 }
 
@@ -3672,59 +3673,73 @@ function birthdayEmptyOrNull(player) {
 
 function beforeOrAfter(guess, actual) {
     if (guess > actual) {
-        return "⬇️";
+        return "⏬";
     } else {
-        return "⬆️";
+        return "⏫";
     }
 }
 
+function withinPercentMargin(guess, actual, percent) {
+    return Math.abs( (actual - guess) / parseFloat(guess) ) <= percent;
+}
+
 function stats(guess, actual) {
-    var result = "<tr><td><b>" + guess.tag + "</b></td>";
+    var result = "<td><b>" + guess.tag + "</b></td>";
     if (guess.race == actual.race) {
-        result += "<td>🟢 " + guess.race + "</td>"
+        result += "<td class=\"green\">" + guess.race + "</td>"
     } else {
-        result += "<td>🔴 " + guess.race + "</td>"
+        result += "<td class=\"red\">" + guess.race + "</td>"
     }
     if (guess.country == actual.country) {
-        result += "<td>🟢 " + guess.country + "</td>"
-    } else if (guess.country == "KR") {
-        result += "<td>🔴 " + guess.country + "</td>"
+        result += "<td class=\"green\">" + guess.country + "</td>"
+    } else if (guess.country == "KR" || actual.country == "KR") {
+        result += "<td class=\"red\">" + guess.country + "</td>"
     } else if (guess.country != "KR") {
-        result += "<td>🟡 " + guess.country + "</td>"
+        result += "<td class=\"yellow\">" + guess.country + "</td>"
+    }
+    if (guess.sum_earnings == actual.sum_earnings) {
+        result += "<td class=\"green\">" + earnings_format.format(guess.sum_earnings) + "</td>"
+    } else if (withinPercentMargin(guess.sum_earnings, actual.sum_earnings, 0.10)) {
+        result += "<td class=\"yellow\">" + earnings_format.format(guess.sum_earnings) + beforeOrAfter(guess.sum_earnings, actual.sum_earnings) + "</td>"
+    } else {
+        result += "<td class=\"red\">" + earnings_format.format(guess.sum_earnings) + beforeOrAfter(guess.sum_earnings, actual.sum_earnings) + "</td>"
     }
     if (guess.rating == actual.rating) {
-        result += "<td>rating 🟢</td>"
-    } else if (guess.rating < actual.rating) {
-        result += "<td>rating ⬆️</td>"
+        result += "<td class=\"green\">" + guess.rating + "</td>"
+    } else if (withinPercentMargin(guess.rating, actual.rating, 0.10)) {
+        result += "<td class=\"yellow\">" + guess.rating + beforeOrAfter(guess.rating, actual.rating) + "</td>"
     } else {
-        result += "<td>rating ⬇️</td>"
+        result += "<td class=\"red\">" + guess.rating + beforeOrAfter(guess.rating, actual.rating) + "</td>"
     }
     if (!birthdayEmptyOrNull(guess) && !birthdayEmptyOrNull(actual)) {
         const guessBirthday = new Date(guess.birthday);
         const actualBirthday = new Date(actual.birthday);
         if (guessBirthday.getFullYear() == actualBirthday.getFullYear() && guessBirthday.getMonth() == actualBirthday.getMonth()) {
-            result += "<td>🟢 " + guess.birthday + "</td>"
+            result += "<td class=\"green\">" + guess.birthday + "</td>"
         } else if (guessBirthday.getFullYear() == actualBirthday.getFullYear()) {
-            result += "<td>🟡" + beforeOrAfter(guessBirthday, actualBirthday) + " " + guess.birthday + "</td>"
+            result += "<td class=\"yellow\">" + guess.birthday + beforeOrAfter(guessBirthday, actualBirthday) + "</td>"
         } else {
-            result += "<td>🔴" + beforeOrAfter(guessBirthday, actualBirthday) + " " + guess.birthday + "</td>"
+            result += "<td class=\"red\">" + guess.birthday + beforeOrAfter(guessBirthday, actualBirthday) + "</td>"
         }
     } else {
-        if (!birthdayEmptyOrNull(actual) && birthdayEmptyOrNull(guess)) {
-            result += "<td>🤷‍♂️</td>"
-        }
+        result += "<td>🤷‍♂️</td>"
     }
     if (formatActive(guess.position) == formatActive(actual.position)) {
-        result += "<td>🟢" + formatActive(guess.position) + "</td>";
+        result += "<td class=\"green\">" + formatActive(guess.position) + "</td>";
     } else {
-        result += "<td>🔴" + formatActive(guess.position) + "</td>";
+        result += "<td class=\"red\">" + formatActive(guess.position) + "</td>";
     }
-    result += "</tr>"
 
-    document.getElementById('result-display').innerHTML = result + document.getElementById('result-display').innerHTML;
+    var table = document.getElementById('result-display');
+    var row = table.insertRow(1);
+    row.innerHTML = result;
 }
 
 function guess(tag) {
+    if (number_of_guesses <= 0) {
+        reset();
+    }
+
     const foundPlayers = players.filter(x => x.tag === tag);
     if (foundPlayers.length <= 0) {
         alert('not found, try again!');
