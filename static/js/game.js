@@ -3626,6 +3626,7 @@ const fuse = new Fuse(JSON.parse(JSON.stringify(players)), fuseOptions);
 
 var main_player = players[Math.floor(Math.random() * players.length)];
 var number_of_guesses = 5;
+var guesses = []; 
 const earnings_format = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
 
 function reset() {
@@ -3633,6 +3634,7 @@ function reset() {
     number_of_guesses = 5;
     document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
     document.getElementById('result-display').innerHTML = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
+    guesses = [];
 }
 
 function elementSelectCallback(event) {
@@ -3740,7 +3742,7 @@ function guess(tag) {
         reset();
     }
 
-    const foundPlayers = players.filter(x => x.tag === tag);
+    var foundPlayers = players.filter(x => x.tag === tag);
     if (foundPlayers.length <= 0) {
         alert('not found, try again!');
         return;
@@ -3748,6 +3750,11 @@ function guess(tag) {
         alert('error: multiple players found!');
         return;
     }
+    if (guesses.includes(foundPlayers[0].tag)) {
+        alert('already guessed!');
+        return;
+    }
+    guesses.push(foundPlayers[0].tag);
 
     number_of_guesses--;
     document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
