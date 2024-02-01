@@ -42,6 +42,12 @@ googleAnalytics = ""
     weight = 30
 
   [[menu.main]]
+    identifier = "katowice"
+    name = "Katowice"
+    pageRef = "/katowice"
+    weight = 40
+
+  [[menu.main]]
     identifier = "about"
     name = "About"
     pageRef = "/about"

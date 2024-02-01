@@ -1,5 +1,5 @@
 
-const players = [
+var players = [
     {
         "id": 485,
         "tag": "Serral",
@@ -518,7 +518,7 @@ const players = [
     },
     {
         "id": 7,
-        "tag": "Rain",
+        "tag": "Rain (KR)",
         "name": "정윤종",
         "romanized_name": "Jung Yoon Jong",
         "birthday": "1992-08-14",
@@ -674,7 +674,7 @@ const players = [
     },
     {
         "id": 1517,
-        "tag": "Bunny",
+        "tag": "Bunny (KR)",
         "name": "이재선",
         "romanized_name": "Lee Jae Sun",
         "birthday": "1995-09-11",
@@ -1190,7 +1190,7 @@ const players = [
     },
     {
         "id": 1813,
-        "tag": "Bunny",
+        "tag": "Bunny (DK)",
         "name": "Patrick Brix",
         "romanized_name": "",
         "birthday": "1992-12-04",
@@ -1454,7 +1454,7 @@ const players = [
     },
     {
         "id": 95,
-        "tag": "Happy",
+        "tag": "Happy (RU)",
         "name": "Дмитрий Костин",
         "romanized_name": "Dmitry Kostin",
         "birthday": "1991-06-17",
@@ -2930,7 +2930,7 @@ const players = [
     },
     {
         "id": 40,
-        "tag": "Happy",
+        "tag": "Happy (KR)",
         "name": "안호진",
         "romanized_name": "Ahn Ho Jin",
         "birthday": "1991-01-22",
@@ -3482,7 +3482,7 @@ const players = [
     },
     {
         "id": 166,
-        "tag": "Check",
+        "tag": "Check (1986)",
         "name": "이형주",
         "romanized_name": "Lee Hyung Joo",
         "birthday": "1986-02-14",
@@ -3554,7 +3554,7 @@ const players = [
     },
     {
         "id": 1663,
-        "tag": "Check",
+        "tag": "Check (1993)",
         "name": "김민규",
         "romanized_name": "Kim Min Kyu",
         "birthday": "1993-01-05",
@@ -3624,14 +3624,15 @@ function initializeFuse() {
     return new Fuse(JSON.parse(JSON.stringify(players)), fuseOptions);
 }
 
-const fuse = initializeFuse();
+var fuse = initializeFuse();
 
 // Variables
 var easyMode = false;
+var guessesPerGame = 5;
 
 // Initial game state
 var main_player = players[Math.floor(Math.random() * players.length)];
-var number_of_guesses = 5;
+var number_of_guesses = guessesPerGame;
 var guesses = []; 
 const earnings_format = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
 
@@ -3748,7 +3749,7 @@ function stats(guess, actual, no_name) {
 
 function reset() {
     main_player = players[Math.floor(Math.random() * players.length)];
-    number_of_guesses = 5;
+    number_of_guesses = guessesPerGame;
     document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
     document.getElementById('result-display').innerHTML = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
     guesses = [];
