@@ -15,6 +15,7 @@ googleAnalytics = ""
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
+  style = "light-without-switcher"
 
   showReadingTime = false
   toc = false
@@ -26,13 +27,25 @@ googleAnalytics = ""
     since = 2024
     poweredby = false
 
+
 [menu]
+  [[menu.main]]
+    identifier = "game"
+    name = "Game"
+    pageRef = "/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "ez"
+    name = "EZ-Mode"
+    pageRef = "/easy-mode"
+    weight = 30
 
   [[menu.main]]
     identifier = "about"
     name = "About"
     pageRef = "/about"
-    weight = 0
+    weight = 50
 
 #[taxonomies]
 #category = "categories"

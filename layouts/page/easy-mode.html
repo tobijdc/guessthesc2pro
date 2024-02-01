@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="homepage-content">
+    {{ .Content }}
+</div>
+
+{{ partial "game.html" .}}
+
+<script language="javascript">
+    easyMode = true;
+    reset();
+</script>
+
+{{ end }}

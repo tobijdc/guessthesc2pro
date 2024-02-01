@@ -3602,40 +3602,38 @@ const players = [
     }
 ]
 
-const fuseOptions = {
-    // isCaseSensitive: false,
-    // includeScore: false,
-    // shouldSort: true,
-    // includeMatches: false,
-    // findAllMatches: false,
-    // minMatchCharLength: 1,
-    // location: 0,
-    threshold: 0.3,
-    // distance: 100,
-    // useExtendedSearch: false,
-    // ignoreLocation: false,
-    // ignoreFieldNorm: false,
-    // fieldNormWeight: 1,
-    keys: [
-        "tag"
-    ]
-};
+function initializeFuse() {
+    const fuseOptions = {
+        // isCaseSensitive: false,
+        // includeScore: false,
+        // shouldSort: true,
+        // includeMatches: false,
+        // findAllMatches: false,
+        // minMatchCharLength: 1,
+        // location: 0,
+        threshold: 0.3,
+        // distance: 100,
+        // useExtendedSearch: false,
+        // ignoreLocation: false,
+        // ignoreFieldNorm: false,
+        // fieldNormWeight: 1,
+        keys: [
+            "tag"
+        ]
+    };
+    return new Fuse(JSON.parse(JSON.stringify(players)), fuseOptions);
+}
 
+const fuse = initializeFuse();
 
-const fuse = new Fuse(JSON.parse(JSON.stringify(players)), fuseOptions);
+// Variables
+var easyMode = false;
 
+// Initial game state
 var main_player = players[Math.floor(Math.random() * players.length)];
 var number_of_guesses = 5;
 var guesses = []; 
 const earnings_format = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
-
-function reset() {
-    main_player = players[Math.floor(Math.random() * players.length)];
-    number_of_guesses = 5;
-    document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
-    document.getElementById('result-display').innerHTML = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
-    guesses = [];
-}
 
 function elementSelectCallback(event) {
     document.getElementById('search-result').innerHTML = "";
@@ -3691,8 +3689,13 @@ function withinPercentMargin(guess, actual, percent) {
     return Math.abs( (actual - guess) / parseFloat(guess) ) <= percent;
 }
 
-function stats(guess, actual) {
-    var result = "<td><b>" + guess.tag + "</b></td>";
+function stats(guess, actual, no_name) {
+    var result = ""
+    if (!no_name) {
+        result += "<td><b>" + guess.tag + "</b></td>";
+    } else {
+        result += "<td><b>???</b></td>";
+    }
     if (guess.race == actual.race) {
         result += "<td class=\"green\">" + guess.race + "</td>"
     } else {
@@ -3743,6 +3746,17 @@ function stats(guess, actual) {
     row.innerHTML = result;
 }
 
+function reset() {
+    main_player = players[Math.floor(Math.random() * players.length)];
+    number_of_guesses = 5;
+    document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
+    document.getElementById('result-display').innerHTML = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
+    guesses = [];
+    if (easyMode) {
+        stats(main_player, main_player, true);
+    }
+}
+
 function guess(tag) {
     if (number_of_guesses <= 0) {
         reset();
@@ -3765,15 +3779,15 @@ function guess(tag) {
     number_of_guesses--;
     document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
     if (foundPlayers[0].id == main_player.id) {
-        stats(foundPlayers[0], main_player);
+        stats(foundPlayers[0], main_player, false);
         document.getElementById('result-display').innerHTML = "<tr>You won!</tr>" + document.getElementById('result-display').innerHTML
         alert('You won! It was: ' + main_player.tag);
         return;
     } else {
-        stats(foundPlayers[0], main_player);
+        stats(foundPlayers[0], main_player, false);
     }
     if (number_of_guesses <= 0) {
-        stats(main_player, main_player);
+        stats(main_player, main_player, false);
         document.getElementById('result-display').innerHTML = "<tr>You lost!</tr>" + document.getElementById('result-display').innerHTML
         document.getElementById('countdown-display').innerHTML = number_of_guesses + " tries left.";
         alert('sorry you lost. Target player was: ' + main_player.tag)
@@ -3783,7 +3797,7 @@ function guess(tag) {
 function playersList() {
     var result = "";
     for (i = 0; i < players.length; i++) {
-        result += i + ": " + players[i].tag + "<br/>";
+        result += (i+1) + ": " + players[i].tag + "<br/>";
     }
     document.getElementById('player-display').innerHTML = result;
 }

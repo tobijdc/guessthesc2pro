@@ -5,4 +5,4 @@ author = "Tobijdc"
 draft = false
 +++
 
-Guess the SC2 Player. You have 5 chances.
+Guess the SC2 Pro. You have 5 chances.
