@@ -3745,6 +3745,9 @@ function stats(guess, actual, no_name) {
 
     var table = document.getElementById('result-display');
     var row = table.insertRow(1);
+    if (guess.tag === actual.tag) {
+        row.class = "correct-result"
+    }
     row.innerHTML = result;
 }
 
@@ -3766,14 +3769,14 @@ function guess(tag) {
 
     var foundPlayers = players.filter(x => x.tag === tag);
     if (foundPlayers.length <= 0) {
-        alert('not found, try again!');
+        alert('Player not found, try again!');
         return;
     } else if (foundPlayers.length > 1) {
         alert('error: multiple players found!');
         return;
     }
     if (guesses.includes(foundPlayers[0].tag)) {
-        alert('already guessed!');
+        alert('Already guessed! Try a diffrent player.');
         return;
     }
     guesses.push(foundPlayers[0].tag);
@@ -3782,17 +3785,15 @@ function guess(tag) {
     document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
     if (foundPlayers[0].id == main_player.id) {
         stats(foundPlayers[0], main_player, false);
-        document.getElementById('result-display').innerHTML = "<tr>You won!</tr>" + document.getElementById('result-display').innerHTML
-        alert('You won! It was: ' + main_player.tag);
+        document.getElementById('result-display').innerHTML = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You won! 🎉</b> Try again?</td></tr>" + document.getElementById('result-display').innerHTML
         return;
     } else {
         stats(foundPlayers[0], main_player, false);
     }
     if (number_of_guesses <= 0) {
         stats(main_player, main_player, false);
-        document.getElementById('result-display').innerHTML = "<tr>You lost!</tr>" + document.getElementById('result-display').innerHTML
+        document.getElementById('result-display').innerHTML = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You lost! 😢</b> Try again?</td></tr>" + document.getElementById('result-display').innerHTML
         document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
-        alert('sorry you lost. Target player was: ' + main_player.tag)
     }
 }
 
