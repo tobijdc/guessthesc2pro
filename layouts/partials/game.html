@@ -5,12 +5,14 @@
     <input id="player_tag" name="player_tag" type="text" placeholder="guess here" onKeyUp="search()" />
     <ul id="search-result"></ul>
 </div>
-<button name="submit" onclick="guess(document.getElementById('player_tag').value)">
-    Guess
-</button>
-<button name="reset" onclick="reset()">
-    Reset Game
-</button>
+<div class="button-container">
+    <button name="submit" class="button" onclick="guess(document.getElementById('player_tag').value)">
+        Guess
+    </button>
+    <button name="reset" class="button" onclick="reset()">
+        Reset Game
+    </button>
+</div>
 
 <table id="result-display" cellpadding="0" cellspacing="0" border="0" style="clear: both;">
     <th>Tag</th>
@@ -22,7 +24,7 @@
     <th>Active</th>
 </table>
 
-<br/>
+<br />
 
 <div id="player-display" class="column-text" onclick="playersList()">
     Click here to load Player List.

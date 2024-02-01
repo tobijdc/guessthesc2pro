@@ -3629,6 +3629,7 @@ var fuse = initializeFuse();
 // Variables
 var easyMode = false;
 var guessesPerGame = 5;
+var tableHeader = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
 
 // Initial game state
 var main_player = players[Math.floor(Math.random() * players.length)];
@@ -3751,7 +3752,7 @@ function reset() {
     main_player = players[Math.floor(Math.random() * players.length)];
     number_of_guesses = guessesPerGame;
     document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
-    document.getElementById('result-display').innerHTML = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
+    document.getElementById('result-display').innerHTML = tableHeader;
     guesses = [];
     if (easyMode) {
         stats(main_player, main_player, true);

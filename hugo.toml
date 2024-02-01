@@ -32,8 +32,8 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [menu]
   [[menu.main]]
-    identifier = "game"
-    name = "Game"
+    identifier = "hard-mode"
+    name = "Hard-Mode"
     pageRef = "/"
     weight = 20
 
