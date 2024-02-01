@@ -1,6 +1,7 @@
 +++
-title = "About"
-author = "Tobijdc"
+title = "About 'Guess the SC2 pro'"
+description = "About who and how the game was created."
+author = "tobijdc"
 draft = false
 +++
 
