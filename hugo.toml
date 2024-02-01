@@ -27,7 +27,6 @@ googleAnalytics = ""
     since = 2024
     poweredby = false
 
-
 [menu]
   [[menu.main]]
     identifier = "game"
@@ -52,8 +51,3 @@ googleAnalytics = ""
     name = "About"
     pageRef = "/about"
     weight = 50
-
-#[taxonomies]
-#category = "categories"
-#tag = "tags"
-#series = "series"
