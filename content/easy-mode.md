@@ -7,7 +7,7 @@ type = "page"
 layout = "easy-mode"
 +++
 
-Guess the SC2 Pro out of the all time Top 300 highest earners.
+Guess the SC2 Pro out of the all time top 300 highest earners.
 
 You get all his information upfront, but what is his tag? You have 5 guesses.
 

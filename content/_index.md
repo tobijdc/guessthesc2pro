@@ -5,4 +5,4 @@ author = "tobijdc"
 draft = false
 +++
 
-Guess the SC2 Pro out of the all time Top 300 highest earners - Hard Mode. You have 5 guesses.
+Guess the SC2 Pro out of the all time top 300 highest earners - Hard Mode. You have 5 guesses.
