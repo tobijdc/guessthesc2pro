@@ -3661,6 +3661,21 @@ function search() {
     }
 }
 
+function formatRace(race) {
+    const imgPrefix = "<img class=\"race-icon\" height=\"20px\" src=\"/img/";
+    if (race === "P") {
+        return imgPrefix + "protoss.svg\" alt=\"P\" />";
+    } else if (race === "T") {
+        return imgPrefix + "terran.svg\" alt=\"T\" />";
+    } else if (race === "Z") {
+        return imgPrefix + "zerg.svg\" alt=\"Z\" />";
+    } else if (race === "R") {
+        return imgPrefix + "random.svg\" alt=\"R\" />";
+    } else {
+        return race;
+    }
+}
+
 function formatActive(text) {
     if (text === "NULL") {
         return "🛏️";
@@ -3699,9 +3714,9 @@ function stats(guess, actual, no_name) {
         result += "<td><b>???</b></td>";
     }
     if (guess.race == actual.race) {
-        result += "<td class=\"green\">" + guess.race + "</td>"
+        result += "<td class=\"green\">" + formatRace(guess.race) + "</td>"
     } else {
-        result += "<td class=\"red\">" + guess.race + "</td>"
+        result += "<td class=\"red\">" + formatRace(guess.race) + "</td>"
     }
     if (guess.country == actual.country) {
         result += "<td class=\"green\">" + guess.country + "</td>"
