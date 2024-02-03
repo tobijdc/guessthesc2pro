@@ -26,13 +26,16 @@
 
 <br />
 
-<div id="player-display" class="column-text" onclick="playersList()">
-    Click here to load Player List.
-</div>
+<details id="playerListDetails" onmouseup="playersList(); this.onmouseup=null;">
+    <summary>Player List (by earnings)</summary>
+    <div id="player-display" class="column-text">
+        Click here to load 
+    </div>
+</details>
 
 <dialog id="socialDialog">
-    <div class="unselectable">Share on Twitter:<br/><br/></div>
+    <div class="unselectable">Share on Twitter:<br /><br /></div>
     <div id="socialTwitterText"></div>
-    <br/>
+    <br />
     <button autofocus id="socialDialogButton" class="button">Close</button>
 </dialog>
