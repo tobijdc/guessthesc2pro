@@ -3635,22 +3635,54 @@ var tableHeader = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rati
 var main_player = players[Math.floor(Math.random() * players.length)];
 var number_of_guesses = guessesPerGame;
 var guesses = [];
-var guessesCompares = []; 
+var guessesCompares = [];
 const earnings_format = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
+var currentListItemFocused = -1;
 
+// ----- SEARCH -----
 function elementSelectCallback(event) {
     document.getElementById('search-result').innerHTML = "";
-    document.getElementById('player_tag').value = this.innerText
+    var input = document.getElementById('player_tag');
+    input.value = this.innerText;
+    input.focus;
 }
 
-function renderListElementWithCallback(text) {
+function renderListElementWithCallback(text, index) {
     var element = document.createElement("li");
+    element.id = "autocomplete-item-${index}";
+    element.role = "listitem";
+    element.tabindex = "0";
     element.innerText = text;
     element.addEventListener("click", elementSelectCallback);
     return element;
 }
 
-function search() {
+function search(event) {
+    var key = event.keyCode || event.charCode;
+    //console.log(key);
+    if (key == 40 || key == 38) { // down && up
+        currentListItemFocused++;
+        var suggestions = document.getElementById('search-result').childNodes;
+        if (!suggestions || suggestions.length <= 0) {
+            return;
+        }
+        if (currentListItemFocused >= suggestions.length) {
+            currentListItemFocused = 0;
+        } else if (currentListItemFocused < 0) {
+            currentListItemFocused = suggestions.length - 1;
+        }
+        suggestions[currentListItemFocused].focus();
+        //suggestions[currentListItemFocused].setAttribute("aria-selected", "true");
+        document.getElementById('player_tag').value = suggestions[currentListItemFocused].innerHTML;
+        //document.getElementById('player_tag').setAttribute("aria-activedescendant", suggestions[currentListItemFocused].id);
+        return;
+    } else if (key == 13) { // Enter
+        document.getElementById('search-result').innerHTML = "";
+        currentListItemFocused = -1;
+        guess(document.getElementById('player_tag').value);
+        return;
+    }
+
     const input = document.getElementById('player_tag').value;
     //console.log(input);
     const result = fuse.search(input, { limit: 10 });
@@ -3658,9 +3690,11 @@ function search() {
     var suggestions = document.getElementById('search-result');
     suggestions.innerHTML = "";
     for (i = 0; i < tags.length; i++) {
-        suggestions.appendChild(renderListElementWithCallback(tags[i]));
+        suggestions.appendChild(renderListElementWithCallback(tags[i], i));
     }
 }
+
+// ----- GUESSING & RENDERING -----
 
 function formatRace(race) {
     const imgPrefix = "<img class=\"race-icon\" height=\"20px\" src=\"/img/";
@@ -3712,7 +3746,7 @@ function renderHigher(higher) {
 }
 
 function withinPercentMargin(guess, actual, percent) {
-    return Math.abs( (actual - guess) / parseFloat(guess) ) <= percent;
+    return Math.abs((actual - guess) / parseFloat(guess)) <= percent;
 }
 
 function compare(guess, actual, no_name) {
@@ -3762,10 +3796,10 @@ function compare(guess, actual, no_name) {
         }
     }
     const activeGuess = !(guess.position === "NULL");
-    const actualActive = !(guess.position === "NULL");
+    const actualActive = !(actual.position === "NULL");
     displayData.active = {
         active: activeGuess,
-        correct: activeGuess == actualActive,
+        correct: activeGuess === actualActive,
     }
     //console.log(JSON.stringify(displayData));
     return displayData;
@@ -3794,30 +3828,6 @@ function socialRow(displayData) {
     }
     result += renderCorrectClose(displayData.active);
     return result;
-}
-
-function socialGrid(guessArray) {
-    var grid = "";
-    for (i = 0; i < guessArray.length; i++) {
-        grid += socialRow(guessArray[i]) + '<br/>';
-    }
-    return grid;
-}
-
-function socialDialog() {
-    const dialog = document.getElementById("socialDialog");
-    const dialogCloseButton = document.getElementById("socialDialogButton");
-    var socialTwitterDiv = document.getElementById("socialTwitterText");
-
-    dialogCloseButton.addEventListener("click", () => {
-        document.getElementById("socialDialog").close();
-    });
-
-
-    var socialText = "I played #guessthesc2pro<br/><br/>" + socialGrid(guessesCompares) + "<br/>Try it out: https://guessthesc2pro.com";
-    socialTwitterDiv.innerHTML = socialText;
-
-    dialog.showModal();
 }
 
 function stats(displayData) {
@@ -3882,6 +3892,7 @@ function reset() {
     document.getElementById('result-display').innerHTML = tableHeader;
     guesses = [];
     guessesCompares = [];
+    currentListItemFocused = -1;
     if (easyMode) {
         const displayData = compare(main_player, main_player, true);
         stats(displayData);
@@ -3906,6 +3917,7 @@ function guess(tag) {
         return;
     }
     guesses.push(foundPlayers[0].tag);
+    document.getElementById('player_tag').value = "";
 
     number_of_guesses--;
     document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
@@ -3928,10 +3940,36 @@ function guess(tag) {
     }
 }
 
+// ----- SOCIAL & PLAYER LIST
+
+function socialGrid(guessArray) {
+    var grid = "";
+    for (i = 0; i < guessArray.length; i++) {
+        grid += socialRow(guessArray[i]) + '<br/>';
+    }
+    return grid;
+}
+
+function socialDialog() {
+    const dialog = document.getElementById("socialDialog");
+    const dialogCloseButton = document.getElementById("socialDialogButton");
+    var socialTwitterDiv = document.getElementById("socialTwitterText");
+
+    dialogCloseButton.addEventListener("click", () => {
+        document.getElementById("socialDialog").close();
+    });
+
+
+    var socialText = "I played #guessthesc2pro<br/><br/>" + socialGrid(guessesCompares) + "<br/>Try it out: https://guessthesc2pro.com";
+    socialTwitterDiv.innerHTML = socialText;
+
+    dialog.showModal();
+}
+
 function playersList() {
     var result = "";
     for (i = 0; i < players.length; i++) {
-        result += (i+1) + ": " + players[i].tag + "<br/>";
+        result += (i + 1) + ": " + players[i].tag + "<br/>";
     }
     document.getElementById('player-display').innerHTML = result;
 }
