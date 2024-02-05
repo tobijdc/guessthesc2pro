@@ -3629,7 +3629,13 @@ var fuse = initializeFuse();
 // Variables
 var easyMode = false;
 var guessesPerGame = 5;
-var tableHeader = "<th>Tag</th><th>Race</th><th>Country</th><th>$$$</th><th>Rating</th><th>Age</th><th>Active</th>";
+var tableHeader = "<th>Tag <i class=\"fa-regular fa-circle-question fa-sm tooltip\" title=\"Name player goes by\"></i></th>\
+<th>Race</th>\
+<th>Country</th>\
+<th>$$$ <i class=\"fa-regular fa-circle-question fa-sm tooltip\" title=\"Tournament earnings according to Aligulac\"></th>\
+<th>Rating <i class=\"fa-regular fa-circle-question fa-sm tooltip\" title=\"Rating according to Aligulac\"></th>\
+<th>Age</th>\
+<th>Active <i class=\"fa-regular fa-circle-question fa-sm tooltip\" title=\"Inactive if no tournament games for ~2 months\"></th>";
 
 // Initial game state
 var main_player = players[Math.floor(Math.random() * players.length)];

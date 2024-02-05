@@ -1,5 +1,13 @@
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.basic.min.js"
+    integrity="sha512-ZCEyk/CZ+XgbCFGD1GWCR5G9lJaBtTHwhaaq8DNSYKLEJMb9N3D7zMQHpAPde/0X3qBJDVp6RUxHcp6xUnVUMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script language="javascript" type="text/javascript" src="{{ " /js/game.js" | urlize | relURL }}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/regular.min.css"
+    integrity="sha512-TzeemgHmrSO404wTLeBd76DmPp5TjWY/f2SyZC6/3LsutDYMVYfOx2uh894kr0j9UM6x39LFHKTeLn99iz378A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style type="text/css">
     #autocomplete-search-box {
         width: 50%;
@@ -101,4 +109,17 @@
     .unselectable {
         user-select: none
     }
+
+    [data-tooltip]:hover {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    [data-tooltip]:hover::after {
+        display: block;
+        position: absolute;
+        content: attr(data-tooltip);
+        border: 1px solid black;
+        background: #eee;
+        padding: .25em;
+      }
 </style>

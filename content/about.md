@@ -23,6 +23,7 @@ The SC2 race logos featured in the game are sourced from [github.com/sc2-pulse/s
 
 The Homepage itself is made with [Hugo](https://gohugo.io/).
 The game is written in vanilla JavaScript, except for the Search, which uses [Fuse](https://www.fusejs.io/).
+Some icons from [FontAwesome](https://fontawesome.com/).
 
 ## Legal
 
