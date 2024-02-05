@@ -30,11 +30,11 @@ jobs:
       - name: Download Aligulac dump
         run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
       - name: Import Aligulac DB
-        run: psql -h localhost:5432 -d postgres -U postgres -f aligulac.sql
+        run: psql -h localhost -p 5432  -d postgres -U postgres -f aligulac.sql
       - name: Import GuessTheSC2Pro Fixes
-        run: psql -h localhost:5432 -d postgres -U postgres -f db_import/data-fixup.sql
+        run: psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
       - name: Import GuessTheSC2Pro Fixes
-        run: psql -h localhost:5432 -d postgres -U postgres -t -A -F"," -f db_import/top500-earnings.sql > result.csv
+        run: psql -h localhost -p 5432  -d postgres -U postgres -t -A -F"," -f db_import/top500-earnings.sql > result.csv
       #- name: Commit changes
       #  run: |
       #    git config --global user.name 'GH Action Bot'
