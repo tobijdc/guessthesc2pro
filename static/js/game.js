@@ -3715,7 +3715,7 @@ function formatActive(text) {
     if (text) {
         return "🎮";
     } else {
-        return "🛏️";
+        return "🚫";
     }
 }
 
