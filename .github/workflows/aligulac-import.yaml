@@ -1,0 +1,41 @@
+on:
+  schedule:
+    - cron: '0 20 * * 5'
+#permissions:
+#  contents: write
+jobs:
+  import_aligulac:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Install postgres client
+        run: sudo apt-get install -y postgresql-client
+      - name: Postgres client version
+        run: psql --version
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Download Aligulac dump
+        run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
+      - name: Import Aligulac DB
+        run: psql -h postgres -d postgres -U postgres -f aligulac.sql
+      - name: Import GuessTheSC2Pro Fixes
+        run: psql -h postgres -d postgres -U postgres -f db_import/data-fixup.sql
+      - name: Import GuessTheSC2Pro Fixes
+        run: psql -h postgres -d postgres -U postgres -t -A -F"," -f db_import/top500-earnings.sql > result.csv
+      #- name: Commit changes
+      #  run: |
+      #    git config --global user.name 'GH Action Bot'
+      #    git config --global user.email 'tobijdce@users.noreply.github.com'
+      #    git add TODO
+      #    git commit -m "Automated Player Update"
+      #    git push

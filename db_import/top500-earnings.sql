@@ -6,4 +6,4 @@ INNER JOIN (
 	GROUP BY earn.player_id
 ) e ON e.player_id = p.id
 WHERE p.id <> 23496 -- we don't want Reynor as race switcher
-ORDER BY e.sum_earnings DESC LIMIT 300
+ORDER BY e.sum_earnings DESC LIMIT 500
