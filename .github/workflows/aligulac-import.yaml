@@ -22,7 +22,9 @@ jobs:
 
     steps:
       - name: Install postgres client
-        run: sudo apt-get install -y postgresql-client yq
+        run: sudo apt-get install -y postgresql-client
+      - name: Install yq
+        run: snap install yq --channel=v3/stable
       - name: Postgres client version
         run: psql --version
       - name: Check out repository code
