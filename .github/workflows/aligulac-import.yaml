@@ -36,7 +36,7 @@ jobs:
       - name: Import GuessTheSC2Pro Fixes
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
       - name: Export player data
-        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -t --csv -f db_import/top500-earnings.sql > result.csv
+        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres --csv -f db_import/top500-earnings.sql > result.csv
       - name: Display CSV
         run: cat result.csv
       - name: Convert to JSON
