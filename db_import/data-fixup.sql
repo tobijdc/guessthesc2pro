@@ -1,5 +1,42 @@
 BEGIN;
 
+-- fix two Rain
+UPDATE public.player
+SET tag = 'Rain (P)'
+WHERE player.id = 7;
+
+UPDATE public.player
+SET tag = 'Rain (T)'
+WHERE player.id = 104;
+
+-- fix two Happy
+UPDATE public.player
+SET tag = 'Happy (RU)'
+WHERE player.id = 95;
+
+UPDATE public.player
+SET tag = 'Happy (KR)'
+WHERE player.id = 40;
+
+-- fix two Check
+UPDATE public.player
+SET tag = 'Check (1993)'
+WHERE player.id = 1663;
+
+UPDATE public.player
+SET tag = 'Check (1986)'
+WHERE player.id = 166;
+
+-- fix two Bunny
+UPDATE public.player
+SET tag = 'Bunny (KR)'
+WHERE player.id = 1517;
+
+UPDATE public.player
+SET tag = 'Bunny (DK)'
+WHERE player.id = 1813;
+
+
 -- fix MaxPax birthday (2004-07)
 -- https://liquipedia.net/starcraft2/MaxPax
 UPDATE public.player
@@ -79,7 +116,5 @@ WHERE player.id = 5118;
 UPDATE public.player
 SET birthday = '1996-02-27'
 WHERE player.id = 2453;
-
-
 
 COMMIT;

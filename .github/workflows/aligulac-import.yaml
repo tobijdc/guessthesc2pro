@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Install postgres client
-        run: sudo apt-get install -y postgresql-client
+        run: sudo apt-get install -y postgresql-client yq
       - name: Postgres client version
         run: psql --version
       - name: Check out repository code
@@ -35,8 +35,12 @@ jobs:
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
       - name: Export player data
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -t -A -F"," -f db_import/top500-earnings.sql > result.csv
-      - name: Display Result
+      - name: Display CSV
         run: cat result.csv
+      - name: Convert to JSON
+        run: yq result.csv -p=csv -o=json > players.json
+      - name: Display JSON
+        run: cat players.json
       #- name: Commit changes
       #  run: |
       #    git config --global user.name 'GH Action Bot'
