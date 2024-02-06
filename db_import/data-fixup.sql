@@ -1,3 +1,5 @@
+BEGIN;
+
 -- fix MaxPax birthday (2004-07)
 -- https://liquipedia.net/starcraft2/MaxPax
 UPDATE public.player
@@ -77,3 +79,7 @@ WHERE player.id = 5118;
 UPDATE public.player
 SET birthday = '1996-02-27'
 WHERE player.id = 2453;
+
+
+
+COMMIT;
