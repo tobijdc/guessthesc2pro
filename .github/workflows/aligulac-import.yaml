@@ -33,8 +33,10 @@ jobs:
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac.sql
       - name: Import GuessTheSC2Pro Fixes
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
-      - name: Import GuessTheSC2Pro Fixes
+      - name: Export player data
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -t -A -F"," -f db_import/top500-earnings.sql > result.csv
+      - name: Display Result
+        run: cat result.csv
       #- name: Commit changes
       #  run: |
       #    git config --global user.name 'GH Action Bot'
