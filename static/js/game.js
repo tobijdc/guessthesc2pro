@@ -4,13 +4,13 @@ var players = [
         "id": 485,
         "tag": "Serral",
         "name": "Joona Sotala",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1998-03-22",
         "country": "FI",
         "race": "Z",
-        "rating": 3745,
+        "rating": 3762,
         "position": 1,
-        "sum_earnings": 1287373
+        "sum_earnings": 1304282
     },
     {
         "id": 49,
@@ -22,7 +22,7 @@ var players = [
         "race": "T",
         "rating": 3423,
         "position": 4,
-        "sum_earnings": 1162688
+        "sum_earnings": 1162687
     },
     {
         "id": 1662,
@@ -44,9 +44,9 @@ var players = [
         "birthday": "1995-10-06",
         "country": "KR",
         "race": "Z",
-        "rating": 3369,
-        "position": 6,
-        "sum_earnings": 1000768
+        "rating": 3420,
+        "position": 5,
+        "sum_earnings": 1004969
     },
     {
         "id": 48,
@@ -64,13 +64,13 @@ var players = [
         "id": 5414,
         "tag": "Reynor",
         "name": "Riccardo Romiti",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "2002-07-01",
         "country": "IT",
         "race": "Z",
-        "rating": 3320,
+        "rating": 3321,
         "position": 7,
-        "sum_earnings": 729469
+        "sum_earnings": 733978
     },
     {
         "id": 63,
@@ -116,8 +116,8 @@ var players = [
         "birthday": "1992-05-15",
         "country": "KR",
         "race": "P",
-        "rating": 2754,
-        "position": 27,
+        "rating": 2746,
+        "position": 26,
         "sum_earnings": 601150
     },
     {
@@ -136,7 +136,7 @@ var players = [
         "id": 4495,
         "tag": "Neeb",
         "name": "Alex Sunderhaft",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1998-02-17",
         "country": "US",
         "race": "P",
@@ -152,9 +152,9 @@ var players = [
         "birthday": "1996-05-09",
         "country": "KR",
         "race": "Z",
-        "rating": 3230,
+        "rating": 3216,
         "position": 9,
-        "sum_earnings": 571812
+        "sum_earnings": 572430
     },
     {
         "id": 47,
@@ -164,9 +164,9 @@ var players = [
         "birthday": "1993-05-08",
         "country": "KR",
         "race": "T",
-        "rating": 3308,
+        "rating": 3284,
         "position": 8,
-        "sum_earnings": 567157
+        "sum_earnings": 567424
     },
     {
         "id": 186,
@@ -176,9 +176,9 @@ var players = [
         "birthday": "1991-11-27",
         "country": "KR",
         "race": "P",
-        "rating": 2959,
+        "rating": 2939,
         "position": 15,
-        "sum_earnings": 525428
+        "sum_earnings": 525578
     },
     {
         "id": 36,
@@ -200,9 +200,9 @@ var players = [
         "birthday": "1992-08-18",
         "country": "KR",
         "race": "P",
-        "rating": 3423,
-        "position": 5,
-        "sum_earnings": 498769
+        "rating": 3419,
+        "position": 6,
+        "sum_earnings": 509355
     },
     {
         "id": 3,
@@ -226,7 +226,7 @@ var players = [
         "race": "P",
         "rating": 2896,
         "position": 16,
-        "sum_earnings": 456200
+        "sum_earnings": 456210
     },
     {
         "id": 19,
@@ -244,7 +244,7 @@ var players = [
         "id": 184,
         "tag": "SpeCial",
         "name": "Juan Carlos Tena Lopez",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1993-05-20",
         "country": "MX",
         "race": "T",
@@ -256,7 +256,7 @@ var players = [
         "id": 23,
         "tag": "Scarlett",
         "name": "Sasha Hostyn",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1993-12-14",
         "country": "CA",
         "race": "Z",
@@ -284,7 +284,7 @@ var players = [
         "birthday": "2000-06-28",
         "country": "CN",
         "race": "T",
-        "rating": 3018,
+        "rating": 3026,
         "position": 12,
         "sum_earnings": 394695
     },
@@ -316,13 +316,13 @@ var players = [
         "id": 26,
         "tag": "Nerchio",
         "name": "Artur Bloch",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1992-08-09",
         "country": "PL",
         "race": "Z",
-        "rating": 2068,
-        "position": "NULL",
-        "sum_earnings": 377054
+        "rating": 2092,
+        "position": 68,
+        "sum_earnings": 377091
     },
     {
         "id": 177,
@@ -340,12 +340,12 @@ var players = [
         "id": 2170,
         "tag": "ShoWTimE",
         "name": "Tobias Sieber",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1994-02-23",
         "country": "DE",
         "race": "P",
-        "rating": 2874,
-        "position": 19,
+        "rating": 2873,
+        "position": 18,
         "sum_earnings": 359660
     },
     {
@@ -356,9 +356,9 @@ var players = [
         "birthday": "1994-11-25",
         "country": "KR",
         "race": "T",
-        "rating": 3178,
+        "rating": 3162,
         "position": 10,
-        "sum_earnings": 340906
+        "sum_earnings": 341515
     },
     {
         "id": 4,
@@ -368,33 +368,33 @@ var players = [
         "birthday": "1991-06-03",
         "country": "KR",
         "race": "Z",
-        "rating": 2893,
+        "rating": 2878,
         "position": 17,
-        "sum_earnings": 329775
+        "sum_earnings": 329875
     },
     {
         "id": 5847,
         "tag": "Elazer",
         "name": "Mikołaj Ogonowski",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-12-11",
         "country": "PL",
         "race": "Z",
-        "rating": 2796,
-        "position": 25,
-        "sum_earnings": 324299
+        "rating": 2832,
+        "position": 22,
+        "sum_earnings": 324647
     },
     {
         "id": 5878,
         "tag": "Clem",
         "name": "Clément Desplanches",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "2002-04-08",
         "country": "FR",
         "race": "T",
-        "rating": 3555,
+        "rating": 3534,
         "position": 2,
-        "sum_earnings": 319112
+        "sum_earnings": 319507
     },
     {
         "id": 10,
@@ -428,9 +428,9 @@ var players = [
         "birthday": "1997-07-04",
         "country": "DE",
         "race": "T",
-        "rating": 3021,
+        "rating": 3029,
         "position": 11,
-        "sum_earnings": 295313
+        "sum_earnings": 295363
     },
     {
         "id": 44,
@@ -440,9 +440,9 @@ var players = [
         "birthday": "1992-08-04",
         "country": "KR",
         "race": "T",
-        "rating": 2977,
+        "rating": 3003,
         "position": 14,
-        "sum_earnings": 291101
+        "sum_earnings": 291348
     },
     {
         "id": 22,
@@ -508,17 +508,17 @@ var players = [
         "id": 58,
         "tag": "MaNa",
         "name": "Grzegorz Komincz",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1993-12-14",
         "country": "PL",
         "race": "P",
-        "rating": 2493,
-        "position": 39,
+        "rating": 2496,
+        "position": 41,
         "sum_earnings": 231483
     },
     {
         "id": 7,
-        "tag": "Rain (KR)",
+        "tag": "Rain (P)",
         "name": "정윤종",
         "romanized_name": "Jung Yoon Jong",
         "birthday": "1992-08-14",
@@ -560,9 +560,9 @@ var players = [
         "birthday": "1997-02-23",
         "country": "KR",
         "race": "P",
-        "rating": 2877,
-        "position": 18,
-        "sum_earnings": 209504
+        "rating": 2835,
+        "position": 21,
+        "sum_earnings": 209624
     },
     {
         "id": 14,
@@ -592,13 +592,13 @@ var players = [
         "id": 4105,
         "tag": "Kelazhur",
         "name": "Diego Guilherme Schwimer",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-10-10",
         "country": "BR",
         "race": "T",
-        "rating": 2659,
+        "rating": 2669,
         "position": 32,
-        "sum_earnings": 199825
+        "sum_earnings": 199875
     },
     {
         "id": 117,
@@ -610,7 +610,7 @@ var players = [
         "race": "Z",
         "rating": 3003,
         "position": 13,
-        "sum_earnings": 193926
+        "sum_earnings": 194371
     },
     {
         "id": 4734,
@@ -626,7 +626,7 @@ var players = [
     },
     {
         "id": 422,
-        "tag": "TRUE",
+        "tag": true,
         "name": "방태수",
         "romanized_name": "Bang Tae Soo",
         "birthday": "1992-04-15",
@@ -664,7 +664,7 @@ var players = [
         "id": 575,
         "tag": "uThermal",
         "name": "Marc Schlappi",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-11-10",
         "country": "NL",
         "race": "T",
@@ -680,8 +680,8 @@ var players = [
         "birthday": "1995-09-11",
         "country": "KR",
         "race": "T",
-        "rating": 2837,
-        "position": 21,
+        "rating": 2836,
+        "position": 20,
         "sum_earnings": 168965
     },
     {
@@ -724,13 +724,13 @@ var players = [
         "id": 4134,
         "tag": "Astrea",
         "name": "Max Angel",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-03-08",
         "country": "US",
         "race": "P",
-        "rating": 2805,
-        "position": 24,
-        "sum_earnings": 149912
+        "rating": 2784,
+        "position": 25,
+        "sum_earnings": 150052
     },
     {
         "id": 72,
@@ -740,7 +740,7 @@ var players = [
         "birthday": "1989-01-22",
         "country": "UA",
         "race": "Z",
-        "rating": 2381,
+        "rating": 2382,
         "position": 47,
         "sum_earnings": 149410
     },
@@ -748,13 +748,13 @@ var players = [
         "id": 4049,
         "tag": "Lambo",
         "name": "Julian Brosig",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-11-10",
         "country": "DE",
         "race": "Z",
-        "rating": 2838,
-        "position": 20,
-        "sum_earnings": 148836
+        "rating": 2822,
+        "position": 23,
+        "sum_earnings": 148986
     },
     {
         "id": 34,
@@ -784,7 +784,7 @@ var players = [
         "id": 251,
         "tag": "MaSa",
         "name": "Maru Kim",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-03-20",
         "country": "CA",
         "race": "T",
@@ -832,7 +832,7 @@ var players = [
         "id": 5087,
         "tag": "PtitDrogo",
         "name": "Théo Freydière",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-11-09",
         "country": "FR",
         "race": "P",
@@ -844,7 +844,7 @@ var players = [
         "id": 129,
         "tag": "HuK",
         "name": "Chris Loranger",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1989-05-10",
         "country": "CA",
         "race": "P",
@@ -880,13 +880,13 @@ var players = [
         "id": 214,
         "tag": "Harstem",
         "name": "Kevin de Koning",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1994-07-28",
         "country": "NL",
         "race": "P",
-        "rating": 2596,
-        "position": 35,
-        "sum_earnings": 132882
+        "rating": 2575,
+        "position": 34,
+        "sum_earnings": 133032
     },
     {
         "id": 35,
@@ -921,7 +921,7 @@ var players = [
         "country": "CN",
         "race": "Z",
         "rating": 1815,
-        "position": 93,
+        "position": 97,
         "sum_earnings": 127972
     },
     {
@@ -940,25 +940,25 @@ var players = [
         "id": 1098,
         "tag": "Cham",
         "name": "Pablo Cham",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-02-19",
         "country": "MX",
         "race": "Z",
-        "rating": 2449,
-        "position": 43,
-        "sum_earnings": 118456
+        "rating": 2480,
+        "position": 42,
+        "sum_earnings": 118613
     },
     {
         "id": 4452,
         "tag": "Spirit",
         "name": "Piotr Walukiewicz",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1998-10-08",
         "country": "PL",
         "race": "T",
-        "rating": 2787,
-        "position": 26,
-        "sum_earnings": 114787
+        "rating": 2737,
+        "position": 27,
+        "sum_earnings": 115073
     },
     {
         "id": 185,
@@ -980,9 +980,9 @@ var players = [
         "birthday": "1992-10-28",
         "country": "CN",
         "race": "P",
-        "rating": 2316,
-        "position": 52,
-        "sum_earnings": 111571
+        "rating": 2332,
+        "position": 51,
+        "sum_earnings": 111585
     },
     {
         "id": 51,
@@ -1000,12 +1000,12 @@ var players = [
         "id": 123,
         "tag": "TLO",
         "name": "Dario Wünsch",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-07-13",
         "country": "DE",
         "race": "Z",
         "rating": 2114,
-        "position": 64,
+        "position": 65,
         "sum_earnings": 108557
     },
     {
@@ -1072,7 +1072,7 @@ var players = [
         "id": 317,
         "tag": "Nina",
         "name": "Alison Qual",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-08-15",
         "country": "US",
         "race": "P",
@@ -1081,28 +1081,28 @@ var players = [
         "sum_earnings": 101540
     },
     {
+        "id": 19591,
+        "tag": "MaxPax",
+        "name": null,
+        "romanized_name": "",
+        "birthday": "2004-07-01",
+        "country": "DK",
+        "race": "P",
+        "rating": 3489,
+        "position": 3,
+        "sum_earnings": 98101
+    },
+    {
         "id": 139,
         "tag": "ThorZaIN",
         "name": "Marcus Eklöf",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1991-02-09",
         "country": "SE",
         "race": "T",
         "rating": 1571,
         "position": "NULL",
         "sum_earnings": 98047
-    },
-    {
-        "id": 19591,
-        "tag": "MaxPax",
-        "name": "NULL",
-        "romanized_name": "NULL",
-        "birthday": "2004-07-01",
-        "country": "DK",
-        "race": "P",
-        "rating": 3446,
-        "position": 3,
-        "sum_earnings": 97340
     },
     {
         "id": 24,
@@ -1113,7 +1113,7 @@ var players = [
         "country": "KR",
         "race": "T",
         "rating": 2520,
-        "position": 38,
+        "position": 40,
         "sum_earnings": 93783
     },
     {
@@ -1132,7 +1132,7 @@ var players = [
         "id": 1649,
         "tag": "MarineLorD",
         "name": "Alexis Eusebio",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-06-01",
         "country": "FR",
         "race": "T",
@@ -1144,7 +1144,7 @@ var players = [
         "id": 5064,
         "tag": "Lilbow",
         "name": "David Moschetto",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-06-27",
         "country": "FR",
         "race": "P",
@@ -1160,9 +1160,9 @@ var players = [
         "birthday": "1999-05-15",
         "country": "TW",
         "race": "P",
-        "rating": 2243,
+        "rating": 2204,
         "position": 56,
-        "sum_earnings": 89005
+        "sum_earnings": 89036
     },
     {
         "id": 18,
@@ -1204,12 +1204,12 @@ var players = [
         "id": 75,
         "tag": "SortOf",
         "name": "Rickard Bergman",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1993-07-24",
         "country": "SE",
         "race": "Z",
         "rating": 2166,
-        "position": 61,
+        "position": 62,
         "sum_earnings": 85572
     },
     {
@@ -1312,13 +1312,13 @@ var players = [
         "id": 4521,
         "tag": "DnS",
         "name": "Adrien Bouet",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1996-04-19",
         "country": "FR",
         "race": "P",
-        "rating": 2340,
-        "position": 48,
-        "sum_earnings": 78830
+        "rating": 2345,
+        "position": 49,
+        "sum_earnings": 78837
     },
     {
         "id": 152,
@@ -1328,9 +1328,9 @@ var players = [
         "birthday": "1986-06-03",
         "country": "UA",
         "race": "Z",
-        "rating": 1935,
-        "position": 79,
-        "sum_earnings": 78290
+        "rating": 1940,
+        "position": 81,
+        "sum_earnings": 78310
     },
     {
         "id": 2053,
@@ -1396,7 +1396,7 @@ var players = [
         "id": 163,
         "tag": "Socke",
         "name": "Giacomo Thüs",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1987-02-02",
         "country": "DE",
         "race": "P",
@@ -1448,8 +1448,8 @@ var players = [
         "birthday": "2001-04-17",
         "country": "RU",
         "race": "P",
-        "rating": 2814,
-        "position": 23,
+        "rating": 2798,
+        "position": 24,
         "sum_earnings": 67181
     },
     {
@@ -1480,7 +1480,7 @@ var players = [
         "id": 155,
         "tag": "IdrA",
         "name": "Gregory Fields",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-08-21",
         "country": "US",
         "race": "Z",
@@ -1540,7 +1540,7 @@ var players = [
         "id": 144,
         "tag": "Grubby",
         "name": "Manuel Schenkhuizen",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1986-05-11",
         "country": "NL",
         "race": "P",
@@ -1564,12 +1564,12 @@ var players = [
         "id": 4723,
         "tag": "Namshar",
         "name": "Christoffer Kolmodin",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1993-01-16",
         "country": "SE",
         "race": "Z",
         "rating": 2197,
-        "position": 59,
+        "position": 58,
         "sum_earnings": 59442
     },
     {
@@ -1612,19 +1612,19 @@ var players = [
         "id": 4370,
         "tag": "GunGFuBanDa",
         "name": "Fabian Mayer",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1998-04-23",
         "country": "DE",
         "race": "P",
-        "rating": 2481,
-        "position": 40,
-        "sum_earnings": 54292
+        "rating": 2524,
+        "position": 39,
+        "sum_earnings": 54442
     },
     {
         "id": 9990,
         "tag": "Seither",
         "name": "Sheldon Barrow",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1994-06-29",
         "country": "AU",
         "race": "T",
@@ -1636,7 +1636,7 @@ var players = [
         "id": 655,
         "tag": "FireCake",
         "name": "Sébastien Lebbe",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-04-27",
         "country": "FR",
         "race": "Z",
@@ -1660,13 +1660,13 @@ var players = [
         "id": 8913,
         "tag": "Gerald",
         "name": "Mateusz Budziak",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1998-10-16",
         "country": "PL",
         "race": "P",
-        "rating": 2332,
-        "position": 50,
-        "sum_earnings": 50585
+        "rating": 2345,
+        "position": 48,
+        "sum_earnings": 50777
     },
     {
         "id": 13216,
@@ -1676,9 +1676,9 @@ var players = [
         "birthday": "2001-06-09",
         "country": "RU",
         "race": "Z",
-        "rating": 2630,
-        "position": 34,
-        "sum_earnings": 49984
+        "rating": 2560,
+        "position": 36,
+        "sum_earnings": 50215
     },
     {
         "id": 4388,
@@ -1696,13 +1696,13 @@ var players = [
         "id": 13017,
         "tag": "Future",
         "name": "Joseph Stanish",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "2002-05-09",
         "country": "US",
         "race": "T",
         "rating": 2458,
-        "position": 41,
-        "sum_earnings": 49102
+        "position": 43,
+        "sum_earnings": 49101
     },
     {
         "id": 5933,
@@ -1712,8 +1712,8 @@ var players = [
         "birthday": "1995-11-05",
         "country": "CN",
         "race": "P",
-        "rating": 2331,
-        "position": 51,
+        "rating": 2330,
+        "position": 52,
         "sum_earnings": 48278
     },
     {
@@ -1768,7 +1768,7 @@ var players = [
         "id": 146,
         "tag": "TargA",
         "name": "Kristoffer Marthinsen",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-04-15",
         "country": "NO",
         "race": "Z",
@@ -1820,8 +1820,8 @@ var players = [
         "birthday": "1994-01-12",
         "country": "VN",
         "race": "Z",
-        "rating": 1970,
-        "position": 77,
+        "rating": 1968,
+        "position": 78,
         "sum_earnings": 42088
     },
     {
@@ -1852,7 +1852,7 @@ var players = [
         "id": 128,
         "tag": "SaSe",
         "name": "Kim Hammar",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1987-07-12",
         "country": "SE",
         "race": "P",
@@ -1868,8 +1868,8 @@ var players = [
         "birthday": "1993-04-23",
         "country": "TW",
         "race": "Z",
-        "rating": 2025,
-        "position": 71,
+        "rating": 2011,
+        "position": 75,
         "sum_earnings": 40539
     },
     {
@@ -1912,7 +1912,7 @@ var players = [
         "id": 224,
         "tag": "SjoW",
         "name": "Jeffrey Brusi",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1986-12-23",
         "country": "SE",
         "race": "T",
@@ -1924,7 +1924,7 @@ var players = [
         "id": 4564,
         "tag": "Denver",
         "name": "Clément Coste",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-04-10",
         "country": "FR",
         "race": "Z",
@@ -1936,7 +1936,7 @@ var players = [
         "id": 5409,
         "tag": "ShaDoWn",
         "name": "Thomas Labrousse",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-07-21",
         "country": "FR",
         "race": "P",
@@ -1948,7 +1948,7 @@ var players = [
         "id": 1148,
         "tag": "EnDerr",
         "name": "Caviar Napoleon Marquises-Acampado",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1992-12-02",
         "country": "PH",
         "race": "Z",
@@ -1988,7 +1988,7 @@ var players = [
         "birthday": "1999-12-05",
         "country": "CN",
         "race": "T",
-        "rating": 2413,
+        "rating": 2422,
         "position": 46,
         "sum_earnings": 36552
     },
@@ -2007,8 +2007,8 @@ var players = [
     {
         "id": 21244,
         "tag": "trigger",
-        "name": "NULL",
-        "romanized_name": "NULL",
+        "name": null,
+        "romanized_name": "",
         "birthday": "2002-07-11",
         "country": "CA",
         "race": "P",
@@ -2084,7 +2084,7 @@ var players = [
         "birthday": "2000-10-02",
         "country": "CN",
         "race": "P",
-        "rating": 2685,
+        "rating": 2671,
         "position": 31,
         "sum_earnings": 33879
     },
@@ -2102,7 +2102,7 @@ var players = [
     },
     {
         "id": 104,
-        "tag": "Rain",
+        "tag": "Rain (T)",
         "name": "박서용",
         "romanized_name": "Park Seo Yong",
         "birthday": "1993-12-04",
@@ -2152,7 +2152,7 @@ var players = [
         "id": 910,
         "tag": "JimRising",
         "name": "Jaime Arturo Duran Silencio",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-10-12",
         "country": "MX",
         "race": "Z",
@@ -2176,7 +2176,7 @@ var players = [
         "id": 5118,
         "tag": "Semper",
         "name": "Alex Dimitriu",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1995-09-06",
         "country": "CA",
         "race": "T",
@@ -2190,7 +2190,7 @@ var players = [
         "name": "Артём Авраменко",
         "romanized_name": "Artem Avramenko",
         "birthday": "1993-12-15",
-        "country": "NULL",
+        "country": null,
         "race": "P",
         "rating": 2082,
         "position": "NULL",
@@ -2204,21 +2204,21 @@ var players = [
         "birthday": "1999-02-23",
         "country": "KR",
         "race": "P",
-        "rating": 2833,
-        "position": 22,
-        "sum_earnings": 31154
+        "rating": 2862,
+        "position": 19,
+        "sum_earnings": 31513
     },
     {
         "id": 14887,
         "tag": "Krystianer",
         "name": "Krystian Szczęsny",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "2004-01-29",
         "country": "PL",
         "race": "P",
-        "rating": 2449,
-        "position": 42,
-        "sum_earnings": 31041
+        "rating": 2528,
+        "position": 38,
+        "sum_earnings": 31457
     },
     {
         "id": 242,
@@ -2272,12 +2272,12 @@ var players = [
         "id": 246,
         "tag": "PiG",
         "name": "Jared Krensel",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1988-12-11",
         "country": "AU",
         "race": "Z",
-        "rating": 1620,
-        "position": 121,
+        "rating": 1627,
+        "position": 127,
         "sum_earnings": 29947
     },
     {
@@ -2356,7 +2356,7 @@ var players = [
         "id": 174,
         "tag": "ToD",
         "name": "Yoan Merlo",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1985-03-20",
         "country": "FR",
         "race": "P",
@@ -2392,24 +2392,24 @@ var players = [
         "id": 7958,
         "tag": "Erik",
         "name": "Erik Bermelho",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1996-11-20",
         "country": "BR",
         "race": "Z",
-        "rating": 2139,
-        "position": "NULL",
-        "sum_earnings": 27687
+        "rating": 2176,
+        "position": 60,
+        "sum_earnings": 27711
     },
     {
         "id": 8169,
         "tag": "Vindicta",
         "name": "Miguel Marmolejo",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "2000-11-23",
         "country": "US",
         "race": "T",
-        "rating": 2112,
-        "position": 65,
+        "rating": 2111,
+        "position": 66,
         "sum_earnings": 27028
     },
     {
@@ -2428,7 +2428,7 @@ var players = [
         "id": 2453,
         "tag": "RiSky",
         "name": "Joshua Hayward",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1996-02-27",
         "country": "UK",
         "race": "Z",
@@ -2440,7 +2440,7 @@ var players = [
         "id": 9846,
         "tag": "goblin",
         "name": "Leon Vrhovec",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "2002-02-03",
         "country": "HR",
         "race": "P",
@@ -2547,7 +2547,7 @@ var players = [
     {
         "id": 11820,
         "tag": "ExpecT",
-        "name": "",
+        "name": null,
         "romanized_name": "Tsung Yen Wu",
         "birthday": "NULL",
         "country": "TW",
@@ -2560,7 +2560,7 @@ var players = [
         "id": 187,
         "tag": "Adelscott",
         "name": "Benoît Strypsteen",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1985-09-23",
         "country": "FR",
         "race": "P",
@@ -2572,7 +2572,7 @@ var players = [
         "id": 115,
         "tag": "BabyKnight",
         "name": "Jon Andersen",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1992-06-15",
         "country": "DK",
         "race": "P",
@@ -2596,7 +2596,7 @@ var players = [
         "id": 192,
         "tag": "Naama",
         "name": "Santeri Lahtinen",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1992-10-13",
         "country": "FI",
         "race": "T",
@@ -2620,7 +2620,7 @@ var players = [
         "id": 243,
         "tag": "Minigun",
         "name": "Chad Richard Jones",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-07-10",
         "country": "US",
         "race": "P",
@@ -2668,11 +2668,11 @@ var players = [
         "id": 9314,
         "tag": "DisK",
         "name": "Alexandre Corriveau",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-01-01",
         "country": "CA",
         "race": "P",
-        "rating": 2202,
+        "rating": 2197,
         "position": 57,
         "sum_earnings": 23218
     },
@@ -2704,7 +2704,7 @@ var players = [
         "id": 15204,
         "tag": "ButAlways",
         "name": "Chen Ting Yu",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "TW",
         "race": "P",
@@ -2715,13 +2715,13 @@ var players = [
     {
         "id": 8359,
         "tag": "GogojOey",
-        "name": "NULL",
-        "romanized_name": "NULL",
+        "name": null,
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "HK",
         "race": "Z",
         "rating": 1931,
-        "position": 80,
+        "position": 82,
         "sum_earnings": 22115
     },
     {
@@ -2757,14 +2757,14 @@ var players = [
         "country": "JP",
         "race": "T",
         "rating": 1852,
-        "position": 88,
+        "position": 93,
         "sum_earnings": 21612
     },
     {
         "id": 6058,
         "tag": "Silky",
         "name": "Nick McNeese",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1996-09-01",
         "country": "US",
         "race": "Z",
@@ -2812,7 +2812,7 @@ var players = [
         "id": 1819,
         "tag": "Xenocider",
         "name": "Libo Chang",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-08-12",
         "country": "US",
         "race": "T",
@@ -2823,20 +2823,20 @@ var players = [
     {
         "id": 5109,
         "tag": "Demi",
-        "name": "NULL",
+        "name": null,
         "romanized_name": "Varun Immanuel",
         "birthday": "NULL",
         "country": "IN",
         "race": "Z",
         "rating": 1654,
-        "position": 115,
+        "position": 121,
         "sum_earnings": 20336
     },
     {
         "id": 156,
         "tag": "Fenix",
         "name": "Jian Carlo Morayra Alejo",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1992-06-03",
         "country": "PE",
         "race": "T",
@@ -2848,7 +2848,7 @@ var players = [
         "id": 78,
         "tag": "monchi",
         "name": "Phillip Simon",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "AT",
         "race": "P",
@@ -2913,7 +2913,7 @@ var players = [
         "country": "KR",
         "race": "P",
         "rating": 1434,
-        "position": 145,
+        "position": 154,
         "sum_earnings": 19355
     },
     {
@@ -2953,6 +2953,18 @@ var players = [
         "sum_earnings": 18982
     },
     {
+        "id": 1171,
+        "tag": "Strange",
+        "name": "Алексей Соляков",
+        "romanized_name": "Alexey Solyakov",
+        "birthday": "1997-03-04",
+        "country": "RU",
+        "race": "P",
+        "rating": 2570,
+        "position": 35,
+        "sum_earnings": 18601
+    },
+    {
         "id": 25,
         "tag": "CoCa",
         "name": "최종환",
@@ -2963,18 +2975,6 @@ var players = [
         "rating": 1773,
         "position": "NULL",
         "sum_earnings": 18598
-    },
-    {
-        "id": 1171,
-        "tag": "Strange",
-        "name": "Алексей Соляков",
-        "romanized_name": "Alexey Solyakov",
-        "birthday": "1997-03-04",
-        "country": "RU",
-        "race": "P",
-        "rating": 2563,
-        "position": 36,
-        "sum_earnings": 18535
     },
     {
         "id": 67,
@@ -2992,7 +2992,7 @@ var players = [
         "id": 183,
         "tag": "Bischu",
         "name": "Jesper Johansson",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1990-01-18",
         "country": "SE",
         "race": "P",
@@ -3008,15 +3008,15 @@ var players = [
         "birthday": "2003-02-19",
         "country": "RU",
         "race": "T",
-        "rating": 2017,
+        "rating": 2059,
         "position": 72,
-        "sum_earnings": 17948
+        "sum_earnings": 18104
     },
     {
         "id": 6937,
         "tag": "Guru",
         "name": "Szymon Nieciąg",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1994-05-12",
         "country": "PL",
         "race": "Z",
@@ -3028,7 +3028,7 @@ var players = [
         "id": 162,
         "tag": "DarKFoRcE",
         "name": "Jonathan Belke",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "DE",
         "race": "Z",
@@ -3040,7 +3040,7 @@ var players = [
         "id": 9338,
         "tag": "eGGz",
         "name": "Sebastián Latorre",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1999-08-22",
         "country": "CO",
         "race": "Z",
@@ -3088,7 +3088,7 @@ var players = [
         "id": 9299,
         "tag": "TeebuL",
         "name": "Haseeb Ishaq",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "UK",
         "race": "P",
@@ -3148,13 +3148,13 @@ var players = [
         "id": 6235,
         "tag": "ArT",
         "name": "Tymoteusz Makaran",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1997-10-18",
         "country": "PL",
         "race": "P",
-        "rating": 2151,
-        "position": 63,
-        "sum_earnings": 16073
+        "rating": 2156,
+        "position": 64,
+        "sum_earnings": 16185
     },
     {
         "id": 66,
@@ -3196,7 +3196,7 @@ var players = [
         "id": 149,
         "tag": "Sheth",
         "name": "Shawn Simon",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1988-10-11",
         "country": "US",
         "race": "Z",
@@ -3309,7 +3309,7 @@ var players = [
         "country": "US",
         "race": "T",
         "rating": 2105,
-        "position": 66,
+        "position": 67,
         "sum_earnings": 13874
     },
     {
@@ -3376,7 +3376,7 @@ var players = [
         "id": 260,
         "tag": "MaFia",
         "name": "Timothy He",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "AU",
         "race": "Z",
@@ -3388,7 +3388,7 @@ var players = [
         "id": 108,
         "tag": "Feast",
         "name": "Jérémy Vansnick",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1993-06-14",
         "country": "BE",
         "race": "P",
@@ -3412,7 +3412,7 @@ var players = [
         "id": 2102,
         "tag": "Bails",
         "name": "Bailey Thomas",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1996-06-25",
         "country": "US",
         "race": "P",
@@ -3424,7 +3424,7 @@ var players = [
         "id": 180,
         "tag": "TT1",
         "name": "Payam Toghyan",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1988-03-18",
         "country": "CA",
         "race": "P",
@@ -3448,7 +3448,7 @@ var players = [
         "id": 227,
         "tag": "ClouD",
         "name": "Carlo Giannacco",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1987-05-31",
         "country": "IT",
         "race": "T",
@@ -3472,7 +3472,7 @@ var players = [
         "id": 7555,
         "tag": "Ryu",
         "name": "Eduard Condori",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "PE",
         "race": "Z",
@@ -3508,12 +3508,12 @@ var players = [
         "id": 2966,
         "tag": "Bioice",
         "name": "Jackson Wroblewski",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "CA",
         "race": "Z",
-        "rating": 1836,
-        "position": 91,
+        "rating": 1835,
+        "position": 94,
         "sum_earnings": 12337
     },
     {
@@ -3568,7 +3568,7 @@ var players = [
         "id": 6459,
         "tag": "NoRegreT",
         "name": "Jake Umpleby",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "1996-03-25",
         "country": "CA",
         "race": "Z",
@@ -3580,7 +3580,7 @@ var players = [
         "id": 4740,
         "tag": "Pezz",
         "name": "Jack Perry",
-        "romanized_name": "NULL",
+        "romanized_name": "",
         "birthday": "NULL",
         "country": "AU",
         "race": "P",
@@ -3644,6 +3644,7 @@ var guesses = [];
 var guessesCompares = [];
 const earnings_format = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
 var currentListItemFocused = -1;
+var won = false;
 
 // ----- SEARCH -----
 function elementSelectCallback(event) {
@@ -3899,6 +3900,7 @@ function reset() {
     guesses = [];
     guessesCompares = [];
     currentListItemFocused = -1;
+    won = false;
     if (easyMode) {
         const displayData = compare(main_player, main_player, true);
         stats(displayData);
@@ -3906,7 +3908,7 @@ function reset() {
 }
 
 function guess(tag) {
-    if (number_of_guesses <= 0) {
+    if (won || number_of_guesses <= 0) {
         reset();
     }
 
@@ -3932,6 +3934,7 @@ function guess(tag) {
         guessesCompares.push(displayData);
         stats(displayData);
         document.getElementById('result-display').innerHTML = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You won! 🎉</b> Try again? <a onclick=\"socialDialog()\">Share 📢</a></td></tr>" + document.getElementById('result-display').innerHTML
+        won = true;
         return;
     } else {
         const displayData = compare(foundPlayers[0], main_player, false);
