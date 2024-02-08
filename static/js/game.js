@@ -3762,8 +3762,10 @@ function compare(guess, actual, no_name) {
 
     if (!no_name) {
         displayData.tag = guess.tag;
+        displayData.aligulacId = guess.id;
     } else {
         displayData.tag = "???";
+        displayData.unknown = true;
     }
     displayData.race = {
         race: guess.race,
@@ -3839,7 +3841,12 @@ function socialRow(displayData) {
 
 function stats(displayData) {
     var result = ""
-    result += "<td><b>" + displayData.tag + "</b></td>";
+    if (displayData.unknown) {
+        result += "<td><b>" + displayData.tag + "</b></td>";
+    } else {
+        result += "<td><b><a target=\"_blank\" href=\"http://aligulac.com/players/" + displayData.aligulacId + "\">" + displayData.tag + "</a></b></td>";
+    }
+    
     if (displayData.race.correct) {
         result += "<td class=\"green\">" + formatRace(displayData.race.race) + "</td>"
     } else {

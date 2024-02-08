@@ -28,3 +28,22 @@ Some icons from [FontAwesome](https://fontawesome.com/).
 ## Legal
 
 StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, Inc., in the U.S. and/or other countries.
+
+## Changelog
+
+{{<details  "Changelog">}}
+- 2024-02-08:
+  - Link to Aligulac on player name
+  - Introduction of Changelog :)
+- 2024-02-07:
+  - Game logic bugfix
+  - Player data update
+- 2024-02-05:
+  - Add hover text to explain Table headings
+  - Change retired icon to "prohibit"
+- 2024-02-04:
+  - Game works with keyboard
+  - Social sharing
+- 2024-02-03:
+  - better player list (looks like akkordeon, copy works)
+{{</details>}}
