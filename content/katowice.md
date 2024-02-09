@@ -8,4 +8,4 @@ layout = "katowice"
 +++
 
 Celebrating the [most hyped tournament of the year](https://liquipedia.net/starcraft2/IEM_Katowice/2024), guess the Katowice SC2 Pro.
-You have 3 guesses.
+You have 4 guesses.
