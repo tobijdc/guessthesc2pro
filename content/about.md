@@ -32,6 +32,14 @@ StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, I
 ## Changelog
 
 {{<details  "Changelog">}}
+- 2024-02-14:
+  - "EasyMode" now default and renamed "Normal".
+  - "EasyMode" now easier:
+    - uses top 250 instead of top 300 players.
+  - "HardMode" now harder:
+    - uses top 400 instead of top 300 players.
+  - Some game description changes
+  - Own minified JS bundles per game mode.
 - 2024-02-08:
   - Link to Aligulac on player name
   - Introduction of Changelog :)

@@ -1,7 +1,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.basic.min.js"
     integrity="sha512-ZCEyk/CZ+XgbCFGD1GWCR5G9lJaBtTHwhaaq8DNSYKLEJMb9N3D7zMQHpAPde/0X3qBJDVp6RUxHcp6xUnVUMA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script language="javascript" type="text/javascript" src="{{ " /js/game.js" | urlize | relURL }}"></script>
+
+{{ $game := resources.Get "js/game.js" }}
+{{ $players400 := resources.Get "js/players400.js" }}
+{{ $players250 := resources.Get "js/players250.js" }}
+{{ $playersKatowice24 := resources.Get "js/playersKatowice24.js" }}
+
+{{ $jsHard := resources.Concat "js/bundle-hard.js" (slice $players400 $game) | minify }}
+{{ $jsKatowice24 := resources.Concat "js/bundle-katowice-24.js" (slice $playersKatowice24 $game) | minify }}
+{{ $js := resources.Concat "js/bundle.js" (slice $players250 $game) | minify }}
+
+{{ if eq .Layout "easy-mode"}}
+    <script src="{{ $js.RelPermalink }}"></script>
+{{ else if eq .Layout "katowice" }}
+    <script src="{{ $jsKatowice24.RelPermalink }}"></script>
+{{ else if eq .Layout "hard-mode" }}
+    <script src="{{ $jsHard.RelPermalink }}"></script>
+{{ end }}
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/regular.min.css"
     integrity="sha512-TzeemgHmrSO404wTLeBd76DmPp5TjWY/f2SyZC6/3LsutDYMVYfOx2uh894kr0j9UM6x39LFHKTeLn99iz378A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />

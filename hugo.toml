@@ -32,15 +32,15 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [menu]
   [[menu.main]]
-    identifier = "hard-mode"
-    name = "Hard-Mode"
+    identifier = "normal-mode"
+    name = "Normal"
     pageRef = "/"
     weight = 20
 
   [[menu.main]]
-    identifier = "ez"
-    name = "EZ-Mode"
-    pageRef = "/easy-mode"
+    identifier = "hard"
+    name = "Hard"
+    pageRef = "/hard-mode"
     weight = 30
 
   [[menu.main]]
