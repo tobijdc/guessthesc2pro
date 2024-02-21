@@ -31,6 +31,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Download Aligulac dump
         run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
+      - name: Modify dump for faster import
+        run: sed -i -e 's/CREATE TABLE/CREATE UNLOGGED TABLE/g' aligulac.sql
       - name: Import Aligulac DB
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac.sql
       - name: Import GuessTheSC2Pro Fixes
@@ -48,7 +50,7 @@ jobs:
       - name: Truncated 250 Player Json
         run: yq '.[0:250]' players.json -o=json > players250.json && yq 'length' players250.json
       - name: Turn Json files into JS
-        run: sed -e '1s/^/var players = /' -e '$a/\;/' players400.json && sed -e '1s/^/var players = /' -e '$a/\;/' players250.json
+        run: sed -i -e '1s/^/var players = /' -e '$a/\;/' players400.json && sed -i -e '1s/^/var players = /' -e '$a/\;/' players250.json
       - name: Rename to js
         run: mv players400.json players400.js && mv players250.json players250.js
       - name: Print players250
@@ -56,7 +58,7 @@ jobs:
       - name: Move to correct location
         run: mv players400.js assets/js/players400.js && mv players250.js assets/js/players250.js
       - name: Git Status
-        run: git status
+        run: git status && git diff assets/js/players250.js
       #- name: Commit changes
       #  run: |
       #    git config --global user.name 'GH Action Bot'
