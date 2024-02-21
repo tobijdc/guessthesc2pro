@@ -32,7 +32,7 @@ jobs:
       - name: Download Aligulac dump
         run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
       - name: Modify dump for faster import
-        run: sed -i -e '/CREATE TABLE/ s//CREATE UNLOGGED TABLE/g' aligulac.sql
+        run: sed -i -e '1s/^/SET max_parallel_maintenance_workers TO 2;SET maintenance_work_mem TO \'1 GB\;/' -e '/CREATE TABLE/ s//CREATE UNLOGGED TABLE/g' aligulac.sql
       - name: Import Aligulac DB
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac.sql
       - name: Import GuessTheSC2Pro Fixes
