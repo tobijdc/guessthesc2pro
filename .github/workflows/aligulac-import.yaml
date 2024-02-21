@@ -43,6 +43,16 @@ jobs:
         run: yq result.csv -p=csv -o=json > players.json
       - name: Display JSON
         run: cat players.json
+      - name: Truncated 400 Player Json
+        run: yq '.[0:399]' players.json -o=json > players400.json && yq 'length' players400.json
+      - name: Truncated 250 Player Json
+        run: yq '.[0:249]' players.json -o=json > players250.json && yq 'length' players250.json
+      - name: Turn Json files into JS
+        run: sed -i '1s/^/var players = /' players400.json && sed -i '1s/^/var players = /' players250.json
+      - name: Rename to js
+        run: mv players400.json players400.js && mv players250.json players250.js
+      - name: Print players250
+        run: cat players250.js
       #- name: Commit changes
       #  run: |
       #    git config --global user.name 'GH Action Bot'
