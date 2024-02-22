@@ -14,7 +14,7 @@ jobs:
           - 5432:5432
         env:
           POSTGRES_PASSWORD: postgres
-          POSTGRES_INITDB_ARGS: "--no-clean --no-sync --set wal_level=minimal --set max_wal_senders=0"
+          POSTGRES_INITDB_ARGS: "--no-clean --no-sync --set wal_level=minimal --set max_wal_senders=0 --set fsync=off --set full_page_writes=off --set synchronous_commit=off"
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
