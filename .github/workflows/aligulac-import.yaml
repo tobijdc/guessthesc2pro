@@ -22,8 +22,8 @@ jobs:
           --health-retries 5
 
     steps:
-      - name: Install postgres client
-        run: sudo apt-get install -y postgresql-client
+      - name: Install postgres client & rg
+        run: sudo apt-get install -y postgresql-client ripgrep
       - name: Postgres client version
         run: psql --version
       - name: Install yq
@@ -33,13 +33,13 @@ jobs:
       - name: Download Aligulac dump
         run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
       - name: Modify dump for faster import
-        run: sed -i -e '/^CREATE TABLE/ s//CREATE UNLOGGED TABLE/g' aligulac.sql
+        run: rg --passthru "^CREATE TABLE" -r "CREATE UNLOGGED TABLE" aligulac.sql > aligulac2.sql
       - name: grep changes
-        run: grep UNLOGGED aligulac.sql
+        run: rg UNLOGGED aligulac2.sql
       - name: DB Settings for faster import
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -c "ALTER SYSTEM SET wal_level = minimal;" -c "ALTER SYSTEM SET fsync = off;" -c "ALTER SYSTEM SET full_page_writes = off;" -c "ALTER SYSTEM SET synchronous_commit = off;" -c "SELECT pg_reload_conf();" -c "SET max_parallel_maintenance_workers TO 2;" -c "SET maintenance_work_mem TO '1 GB';" -c "SHOW wal_level;"
       - name: Import Aligulac DB
-        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac.sql
+        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac2.sql
       - name: Import GuessTheSC2Pro Fixes
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
       - name: Export player data
