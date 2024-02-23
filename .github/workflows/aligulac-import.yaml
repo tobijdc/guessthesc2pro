@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Install postgres client & rg
-        run: sudo apt-get install -y postgresql-client ripgrep
+        run: sudo apt-get install -y postgresql-client ripgrep axel pigz
       - name: Postgres client version
         run: psql --version
       - name: Install yq
@@ -31,7 +31,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Download Aligulac dump
-        run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
+        run: axel http://static.aligulac.com/aligulac.sql.gz && pigz -dc aligulac.sql.gz > aligulac.sql
       - name: Modify dump for faster import
         run: rg --passthru "^CREATE TABLE" -r "CREATE UNLOGGED TABLE" aligulac.sql > aligulac2.sql
       - name: grep changes
