@@ -14,7 +14,7 @@ jobs:
           - 5432:5432
         env:
           POSTGRES_PASSWORD: postgres
-          POSTGRES_INITDB_ARGS: "--no-clean --no-sync --set wal_level=minimal --set max_wal_senders=0 --set fsync=off --set full_page_writes=off --set synchronous_commit=off --set synchronous_commit=off --set bgwriter_lru_maxpages=0 --set archive_mode=off --set work_mem=256MB --set maintenance_work_mem=256MB --set shared_buffers=512MB --set checkpoint_segments=32"
+          POSTGRES_INITDB_ARGS: "--no-clean --no-sync --set wal_level=minimal --set max_wal_senders=0 --set fsync=off --set full_page_writes=off --set synchronous_commit=off --set synchronous_commit=off --set bgwriter_lru_maxpages=0 --set archive_mode=off --set work_mem=256MB --set maintenance_work_mem=256MB --set shared_buffers=512MB"
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
