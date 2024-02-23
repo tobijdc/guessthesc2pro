@@ -14,7 +14,7 @@ jobs:
           - 5432:5432
         env:
           POSTGRES_PASSWORD: postgres
-          POSTGRES_INITDB_ARGS: "--no-clean --no-sync --set wal_level=minimal --set max_wal_senders=0 --set fsync=off --set full_page_writes=off --set synchronous_commit=off"
+          POSTGRES_INITDB_ARGS: "--no-clean --no-sync --set wal_level=minimal --set max_wal_senders=0 --set fsync=off --set full_page_writes=off --set synchronous_commit=off --set synchronous_commit=off --set bgwriter_lru_maxpages=0 --set archive_mode=off --set work_mem=256MB --set maintenance_work_mem=256MB --set shared_buffers=512MB --set checkpoint_segments=32"
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -38,16 +38,12 @@ jobs:
         run: rg --passthru "^CREATE INDEX group" -r "--CREATE INDEX group" aligulac2.sql > aligulac3.sql
       - name: grep changes
         run: rg UNLOGGED aligulac3.sql && rg -C 1 "CREATE INDEX" aligulac3.sql
-      - name: DB Settings for faster import
-        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -c "SET max_parallel_maintenance_workers TO 2;" -c "SET maintenance_work_mem TO '1 GB';" -c "SHOW wal_level;"
       - name: Import Aligulac DB
-        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -c '\timing on' -f aligulac3.sql
+        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac3.sql
       - name: Import GuessTheSC2Pro Fixes
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
       - name: Export player data
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres --csv -f db_import/top500-earnings.sql > result.csv
-      - name: Display CSV
-        run: cat result.csv
       - name: Convert to JSON
         run: yq result.csv -p=csv -o=json > players.json
       - name: Truncated 400 Player Json
@@ -62,10 +58,10 @@ jobs:
         run: mv players400.js assets/js/players400.js && mv players250.js assets/js/players250.js
       - name: Git Status
         run: git config --global diff.algorithm patience && git status && git diff assets/js/players250.js
-      #- name: Commit changes
-      #  run: |
-      #    git config --global user.name 'GH Action Bot'
-      #    git config --global user.email 'tobijdce@users.noreply.github.com'
-      #    git add TODO
-      #    git commit -m "Automated Player Update"
-      #    git push
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GH Action Bot'
+          git config --global user.email 'tobijdce@users.noreply.github.com'
+          git add assets/js/
+          git commit -m "Automated Player Update"
+          git push
