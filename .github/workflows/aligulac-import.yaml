@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Install postgres client & rg
-        run: sudo apt-get install -y postgresql-client ripgrep axel pigz
+        run: sudo apt-get install -y postgresql-client ripgrep
       - name: Postgres client version
         run: psql --version
       - name: Install yq
@@ -31,17 +31,17 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Download Aligulac dump
-        run: axel -q -n 3 http://static.aligulac.com/aligulac.sql.gz && pigz -dc aligulac.sql.gz > aligulac.sql
+        run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
       - name: Modify dump for faster import
         run: rg --passthru "^CREATE TABLE" -r "CREATE UNLOGGED TABLE" aligulac.sql > aligulac2.sql
       - name: Modify dump for faster import 2
-        run: rg --passthru "^CREATE INDEX group" -r "%%CREATE INDEX group" aligulac2.sql > aligulac3.sql
+        run: rg --passthru "^CREATE INDEX group" -r "--CREATE INDEX group" aligulac2.sql > aligulac3.sql
       - name: grep changes
         run: rg UNLOGGED aligulac3.sql && rg -C 1 "CREATE INDEX" aligulac3.sql
       - name: DB Settings for faster import
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -c "SET max_parallel_maintenance_workers TO 2;" -c "SET maintenance_work_mem TO '1 GB';" -c "SHOW wal_level;"
       - name: Import Aligulac DB
-        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f aligulac3.sql
+        run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -c '\timing on' -f aligulac3.sql
       - name: Import GuessTheSC2Pro Fixes
         run: PGPASSWORD=postgres psql -h localhost -p 5432  -d postgres -U postgres -f db_import/data-fixup.sql
       - name: Export player data
