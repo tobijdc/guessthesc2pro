@@ -35,7 +35,7 @@ jobs:
       - name: Modify dump for faster import
         run: rg --passthru "^CREATE TABLE" -r "CREATE UNLOGGED TABLE" aligulac.sql > aligulac2.sql
       - name: Modify dump for faster import 2
-        run: rg --passthru "^CREATE INDEX match" -r "%CREATE INDEX match" > aligulac3.sql
+        run: rg --passthru "^CREATE INDEX match" -r "%CREATE INDEX match" aligulac2.sql > aligulac3.sql
       - name: grep changes
         run: rg UNLOGGED aligulac3.sql && rg -C 2 "CREATE INDEX" aligulac3.sql
       - name: DB Settings for faster import
