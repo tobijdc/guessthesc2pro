@@ -9,6 +9,6 @@ layout = "hard-mode"
 
 Hard Mode:
  - a bigger player pool --> 400 players
- - no information upfront
+ - less information upfront
 
 You need to guess the  StarCraft2 Pro out of the top 400 highest earners - You have 5 guesses.

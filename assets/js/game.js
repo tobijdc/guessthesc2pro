@@ -115,8 +115,10 @@ function formatRace(race) {
     }
 }
 
-function formatActive(text) {
-    if (text) {
+function formatActive(active) {
+    if (active.unknown) {
+        return "???";
+    } else if (active.active) {
         return "🎮";
     } else {
         return "🚫";
@@ -146,6 +148,14 @@ function renderHigher(higher) {
         return "⏫";
     } else {
         return "⏬";
+    }
+}
+
+function formatEarnings(earnings) {
+    if (earnings.unknown) {
+        return "???";
+    } else {
+        return earnings_format.format(earnings.sum_earnings);
     }
 }
 
@@ -258,11 +268,11 @@ function stats(displayData) {
     }
     result += displayData.country.country + "</td>"
     if (displayData.sum_earnings.correct) {
-        result += "<td class=\"green\">" + earnings_format.format(displayData.sum_earnings.sum_earnings) + "</td>"
+        result += "<td class=\"green\">" +  formatEarnings(displayData.sum_earnings) + "</td>"
     } else if (displayData.sum_earnings.close) {
-        result += "<td class=\"yellow\">" + earnings_format.format(displayData.sum_earnings.sum_earnings) + renderHigher(displayData.sum_earnings.higher) + "</td>"
+        result += "<td class=\"yellow\">" + formatEarnings(displayData.sum_earnings) + renderHigher(displayData.sum_earnings.higher) + "</td>"
     } else {
-        result += "<td class=\"red\">" + earnings_format.format(displayData.sum_earnings.sum_earnings) + renderHigher(displayData.sum_earnings.higher) + "</td>"
+        result += "<td class=\"red\">" + formatEarnings(displayData.sum_earnings) + renderHigher(displayData.sum_earnings.higher) + "</td>"
     }
     if (displayData.rating.correct) {
         result += "<td class=\"green\">" + displayData.rating.rating + "</td>"
@@ -283,9 +293,9 @@ function stats(displayData) {
         result += "<td>🤷‍♂️</td>"
     }
     if (displayData.active.correct) {
-        result += "<td class=\"green\">" + formatActive(displayData.active.active) + "</td>";
+        result += "<td class=\"green\">" + formatActive(displayData.active) + "</td>";
     } else {
-        result += "<td class=\"red\">" + formatActive(displayData.active.active) + "</td>";
+        result += "<td class=\"red\">" + formatActive(displayData.active) + "</td>";
     }
 
     var table = document.getElementById('result-display');
@@ -294,6 +304,59 @@ function stats(displayData) {
         row.class = "correct-result"
     }
     row.innerHTML = result;
+}
+
+function playerDisplayDataHardMode(player) {
+    var displayData = {};
+    displayData.correct = true;
+    displayData.tag = "???";
+    displayData.unknown = true;
+
+    displayData.race = {
+        race: player.race,
+        correct: true,
+    }
+    displayData.country = {
+        country: "???",
+        correct: true,
+        close: true,
+    }
+    displayData.sum_earnings = {
+        unknown: true,
+        sum_earnings: 0,
+        correct: true,
+        close: true,
+        higher: true,
+    }
+    displayData.rating = {
+        rating: "???",
+        correct: true,
+        close: true,
+        higher: true,
+    }
+
+    if (!birthdayEmptyOrNull(player)) {
+        const guessAge = _calculateAge(new Date(player.birthday));
+        displayData.age = {
+            hasAge: true,
+            age: guessAge,
+            correct: true,
+            close: true,
+            higher: true,
+        }
+    } else {
+        displayData.age = {
+            hasAge: false,
+        }
+    }
+
+    displayData.active = {
+        unknown: true,
+        active: true,
+        correct: true,
+    }
+    //console.log(JSON.stringify(displayData));
+    return displayData;
 }
 
 function reset() {
@@ -307,6 +370,10 @@ function reset() {
     won = false;
     if (easyMode) {
         const displayData = compare(main_player, main_player, true);
+        console.log(displayData);
+        stats(displayData);
+    } else {
+        const displayData = playerDisplayDataHardMode(main_player);
         stats(displayData);
     }
 }
