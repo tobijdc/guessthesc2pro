@@ -41,4 +41,4 @@ And access the page on `http://localhost:1313`.
 
 # License
 
-[MIT](LICENSE.md)
+[MIT](LICENSE)
