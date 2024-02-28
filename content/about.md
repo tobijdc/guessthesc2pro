@@ -32,10 +32,12 @@ StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, I
 ## Changelog
 
 {{<details  "Changelog">}}
+- 2024-02-28:
+  - Open Source
 - 2024-02-24:
-  - Hardmode an KAtowice now give initial small hint
+  - Hardmode an Katowice now give initial small hint
 - 2024-02-23:
-  - automated weekly update of player data
+  - Automated weekly update of player data
 - 2024-02-14:
   - "EasyMode" now default and renamed "Normal".
   - "EasyMode" now easier:
