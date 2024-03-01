@@ -26,6 +26,7 @@ var fuse = initializeFuse();
 // Variables
 var easyMode = true;
 var guessesPerGame = 5;
+var challengeMode = false;
 var tableHeader = "<th>Tag <i class=\"fa-regular fa-circle-question fa-sm tooltip\" title=\"Name player goes by\"></i></th>\
 <th>Race</th>\
 <th>Country</th>\
@@ -306,7 +307,7 @@ function stats(displayData) {
     row.innerHTML = result;
 }
 
-function playerDisplayDataHardMode(player) {
+function playerDisplayDataHardMode(player, withCountry) {
     var displayData = {};
     displayData.correct = true;
     displayData.tag = "???";
@@ -316,10 +317,18 @@ function playerDisplayDataHardMode(player) {
         race: player.race,
         correct: true,
     }
-    displayData.country = {
-        country: "???",
-        correct: true,
-        close: true,
+    if (withCountry) {
+        displayData.country = {
+            country: player.country,
+            correct: true,
+            close: true,
+        }
+    } else {
+        displayData.country = {
+            country: "???",
+            correct: true,
+            close: true,
+        }
     }
     displayData.sum_earnings = {
         unknown: true,
@@ -360,7 +369,6 @@ function playerDisplayDataHardMode(player) {
 }
 
 function reset() {
-    main_player = players[Math.floor(Math.random() * players.length)];
     number_of_guesses = guessesPerGame;
     document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
     document.getElementById('result-display').innerHTML = tableHeader;
@@ -368,19 +376,32 @@ function reset() {
     guessesCompares = [];
     currentListItemFocused = -1;
     won = false;
+    if (challengeMode) {
+        var dailyTag = "Stephano";
+        main_player = players.find(obj => {
+            return obj.tag === dailyTag
+        });
+    } else {
+        main_player = players[Math.floor(Math.random() * players.length)];
+    }
     if (easyMode) {
         const displayData = compare(main_player, main_player, true);
         console.log(displayData);
         stats(displayData);
+    } else if (challengeMode) {
+        const displayData = playerDisplayDataHardMode(main_player, true);
+        stats(displayData);
     } else {
-        const displayData = playerDisplayDataHardMode(main_player);
+        const displayData = playerDisplayDataHardMode(main_player, false);
         stats(displayData);
     }
 }
 
 function guess(tag) {
-    if (won || number_of_guesses <= 0) {
+    if (!challengeMode && (won || number_of_guesses <= 0)) {
         reset();
+    } else if (won || number_of_guesses <= 0) {
+        return; // Do not reset challengeMode
     }
 
     var foundPlayers = players.filter(x => x.tag === tag);
@@ -404,8 +425,18 @@ function guess(tag) {
         const displayData = compare(foundPlayers[0], main_player, false);
         guessesCompares.push(displayData);
         stats(displayData);
-        document.getElementById('result-display').innerHTML = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You won! 🎉</b> Try again? <a onclick=\"socialDialog()\">Share 📢</a></td></tr>" + document.getElementById('result-display').innerHTML
+        var resultText = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You won! 🎉</b>"
+        if (!challengeMode) {
+            resultText += " Try again?"
+        } else {
+            resultText += " Come back tomorrow!"
+        }
+        resultText += " <a onclick=\"socialDialog()\">Share 📢</a></td></tr>" + document.getElementById('result-display').innerHTML;
+        document.getElementById('result-display').innerHTML = resultText;
         won = true;
+        if (challengeMode) {
+            socialDialog();
+        }
         return;
     } else {
         const displayData = compare(foundPlayers[0], main_player, false);
@@ -415,7 +446,14 @@ function guess(tag) {
     if (number_of_guesses <= 0) {
         const displayData = compare(main_player, main_player, false);
         stats(displayData);
-        document.getElementById('result-display').innerHTML = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You lost! 😢</b> Try again? <a onclick=\"socialDialog()\">Share 📢</a></td></tr>" + document.getElementById('result-display').innerHTML
+        var resultText = "<tr><td colspan=\"100%\" class=\"win-loss-display\"><b>You lost! 😢</b>"
+        if (!challengeMode) {
+            resultText += " Try again?"
+        } else {
+            resultText += " Try again tomorrow"
+        }
+        resultText += " <a onclick=\"socialDialog()\">Share 📢</a></td></tr>" + document.getElementById('result-display').innerHTML;
+        document.getElementById('result-display').innerHTML = resultText;
         document.getElementById('countdown-display').innerHTML = "<b>" + number_of_guesses + "</b> tries left.";
     }
 }
@@ -434,15 +472,15 @@ function socialDialog() {
     const dialog = document.getElementById("socialDialog");
     const dialogCloseButton = document.getElementById("socialDialogButton");
     var socialTwitterDiv = document.getElementById("socialTwitterText");
+    var socialTwitterButton = document.getElementById("twitter-share-button");
 
     dialogCloseButton.addEventListener("click", () => {
         document.getElementById("socialDialog").close();
     });
 
 
-    var socialText = "I played #guessthesc2pro<br/><br/>" + socialGrid(guessesCompares) + "<br/>Try it out: https://guessthesc2pro.com";
-    socialTwitterDiv.innerHTML = socialText;
-
+    var socialText = "I played #guessthesc2pro<br/><br/>" + socialGrid(guessesCompares);
+    socialTwitterDiv.innerHTML = socialText + "<br/>Try it out: https://guessthesc2pro.com";
     dialog.showModal();
 }
 

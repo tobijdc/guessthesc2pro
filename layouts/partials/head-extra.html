@@ -17,6 +17,8 @@
     <script src="{{ $jsKatowice24.RelPermalink }}"></script>
 {{ else if eq .Layout "hard-mode" }}
     <script src="{{ $jsHard.RelPermalink }}"></script>
+{{ else if eq .Layout "daily" }}
+    <script src="{{ $jsHard.RelPermalink }}"></script>
 {{ end }}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/regular.min.css"
@@ -125,6 +127,15 @@
 
     .unselectable {
         user-select: none
+    }
+
+    dialog {
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0);
+        transition:  2s ease-out;
+      }  
+    dialog.fadeUp {
+        box-shadow: 0 0 0 100vw  rgba(0, 0, 63, 0.8);
+        transition:  2s ease-out;
     }
 
     [data-tooltip]:hover {

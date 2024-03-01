@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="homepage-content">
+    {{ .Content }}
+    <hr>
+</div>
+
+{{ partial "game.html" .}}
+
+<script language="javascript">
+    easyMode = false;
+    challengeMode = true;
+    document.getElementById("reset-btn").style.display = "none";
+    reset();
+</script>
+
+{{ end }}

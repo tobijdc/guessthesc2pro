@@ -5,3 +5,6 @@
 
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
+
+/daily/
+  X-Robots-Tag: noindex
