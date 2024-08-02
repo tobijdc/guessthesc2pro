@@ -33,7 +33,7 @@ var players = [
     "race": "Z",
     "rating": 3355,
     "position": 6,
-    "sum_earnings": 1064203
+    "sum_earnings": 1064503
   },
   {
     "id": 1662,
@@ -45,7 +45,7 @@ var players = [
     "race": "Z",
     "rating": 2929,
     "position": 18,
-    "sum_earnings": 1033217
+    "sum_earnings": 1033342
   },
   {
     "id": 5414,
@@ -57,7 +57,7 @@ var players = [
     "race": "Z",
     "rating": 3276,
     "position": 7,
-    "sum_earnings": 749174
+    "sum_earnings": 749374
   },
   {
     "id": 48,
@@ -141,7 +141,7 @@ var players = [
     "race": "T",
     "rating": 3083,
     "position": 12,
-    "sum_earnings": 598337
+    "sum_earnings": 598551
   },
   {
     "id": 1793,
@@ -261,7 +261,7 @@ var players = [
     "race": "Z",
     "rating": 2778,
     "position": 26,
-    "sum_earnings": 440126
+    "sum_earnings": 440176
   },
   {
     "id": 10115,
@@ -273,7 +273,7 @@ var players = [
     "race": "T",
     "rating": 3121,
     "position": 9,
-    "sum_earnings": 416716
+    "sum_earnings": 416830
   },
   {
     "id": 13,
@@ -345,7 +345,7 @@ var players = [
     "race": "P",
     "rating": 2821,
     "position": 25,
-    "sum_earnings": 376080
+    "sum_earnings": 376158
   },
   {
     "id": 2170,
@@ -369,7 +369,7 @@ var players = [
     "race": "T",
     "rating": 3456,
     "position": 4,
-    "sum_earnings": 365737
+    "sum_earnings": 365976
   },
   {
     "id": 4,
@@ -681,7 +681,7 @@ var players = [
     "race": "R",
     "rating": 2233,
     "position": 56,
-    "sum_earnings": 174102
+    "sum_earnings": 174252
   },
   {
     "id": 4134,
@@ -693,7 +693,7 @@ var players = [
     "race": "P",
     "rating": 2738,
     "position": 28,
-    "sum_earnings": 168653
+    "sum_earnings": 168683
   },
   {
     "id": 145,
@@ -717,7 +717,7 @@ var players = [
     "race": "Z",
     "rating": 2897,
     "position": 21,
-    "sum_earnings": 152578
+    "sum_earnings": 152678
   },
   {
     "id": 1652,
@@ -897,7 +897,7 @@ var players = [
     "race": "T",
     "rating": 2681,
     "position": 31,
-    "sum_earnings": 133776
+    "sum_earnings": 133901
   },
   {
     "id": 4452,
@@ -909,7 +909,7 @@ var players = [
     "race": "T",
     "rating": 2856,
     "position": 24,
-    "sum_earnings": 130803
+    "sum_earnings": 130968
   },
   {
     "id": 109,
@@ -969,7 +969,7 @@ var players = [
     "race": "P",
     "rating": 2503,
     "position": 40,
-    "sum_earnings": 118192
+    "sum_earnings": 118242
   },
   {
     "id": 19591,
@@ -981,7 +981,7 @@ var players = [
     "race": "P",
     "rating": 3583,
     "position": 2,
-    "sum_earnings": 114621
+    "sum_earnings": 114948
   },
   {
     "id": 185,
@@ -1221,7 +1221,7 @@ var players = [
     "race": "P",
     "rating": 2898,
     "position": 20,
-    "sum_earnings": 84591
+    "sum_earnings": 84774
   },
   {
     "id": 4120,
@@ -1329,7 +1329,7 @@ var players = [
     "race": "P",
     "rating": 2418,
     "position": 48,
-    "sum_earnings": 80067
+    "sum_earnings": 80167
   },
   {
     "id": 152,
@@ -1569,7 +1569,7 @@ var players = [
     "race": "Z",
     "rating": 2059,
     "position": 70,
-    "sum_earnings": 59452
+    "sum_earnings": 59560
   },
   {
     "id": 42,
@@ -1632,18 +1632,6 @@ var players = [
     "sum_earnings": 54033
   },
   {
-    "id": 13216,
-    "tag": "Wayne",
-    "name": "Иван Чепурнов",
-    "romanized_name": "Ivan Chepurnov",
-    "birthday": "2001-06-09",
-    "country": "RU",
-    "race": "Z",
-    "rating": 2435,
-    "position": 46,
-    "sum_earnings": 53472
-  },
-  {
     "id": 8913,
     "tag": "Gerald",
     "name": "Mateusz Budziak",
@@ -1653,7 +1641,19 @@ var players = [
     "race": "P",
     "rating": 2401,
     "position": 49,
-    "sum_earnings": 53197
+    "sum_earnings": 53541
+  },
+  {
+    "id": 13216,
+    "tag": "Wayne",
+    "name": "Иван Чепурнов",
+    "romanized_name": "Ivan Chepurnov",
+    "birthday": "2001-06-09",
+    "country": "RU",
+    "race": "Z",
+    "rating": 2435,
+    "position": 46,
+    "sum_earnings": 53522
   },
   {
     "id": 9990,
@@ -1725,7 +1725,7 @@ var players = [
     "race": "P",
     "rating": 2573,
     "position": 38,
-    "sum_earnings": 48720
+    "sum_earnings": 48774
   },
   {
     "id": 300,
@@ -1857,7 +1857,7 @@ var players = [
     "race": "P",
     "rating": 2642,
     "position": 33,
-    "sum_earnings": 41941
+    "sum_earnings": 41991
   },
   {
     "id": 8980,
@@ -2025,7 +2025,7 @@ var players = [
     "race": "P",
     "rating": 2884,
     "position": 22,
-    "sum_earnings": 36520
+    "sum_earnings": 36550
   },
   {
     "id": 2567,
@@ -2325,7 +2325,7 @@ var players = [
     "race": "Z",
     "rating": 2175,
     "position": 63,
-    "sum_earnings": 29486
+    "sum_earnings": 29507
   },
   {
     "id": 747,
@@ -2349,7 +2349,7 @@ var players = [
     "race": "P",
     "rating": 2384,
     "position": 50,
-    "sum_earnings": 29126
+    "sum_earnings": 29206
   },
   {
     "id": 1655,
@@ -2829,7 +2829,7 @@ var players = [
     "race": "P",
     "rating": 2602,
     "position": 37,
-    "sum_earnings": 20398
+    "sum_earnings": 20445
   },
   {
     "id": 1819,
@@ -3141,7 +3141,7 @@ var players = [
     "race": "P",
     "rating": 2134,
     "position": 66,
-    "sum_earnings": 16482
+    "sum_earnings": 16497
   },
   {
     "id": 217,
@@ -3285,7 +3285,7 @@ var players = [
     "race": "Z",
     "rating": 2382,
     "position": 51,
-    "sum_earnings": 14558
+    "sum_earnings": 14608
   },
   {
     "id": 239,
@@ -3645,7 +3645,7 @@ var players = [
     "race": "T",
     "rating": 2156,
     "position": 65,
-    "sum_earnings": 11609
+    "sum_earnings": 11659
   },
   {
     "id": 167,
@@ -4008,6 +4008,18 @@ var players = [
     "sum_earnings": 9910
   },
   {
+    "id": 18651,
+    "tag": "ForJumy",
+    "name": null,
+    "romanized_name": null,
+    "birthday": "2002-06-27",
+    "country": "DE",
+    "race": "P",
+    "rating": 2131,
+    "position": 67,
+    "sum_earnings": 9818
+  },
+  {
     "id": 2574,
     "tag": "Ruin",
     "name": "홍덕",
@@ -4018,18 +4030,6 @@ var players = [
     "rating": 1695,
     "position": null,
     "sum_earnings": 9682
-  },
-  {
-    "id": 18651,
-    "tag": "ForJumy",
-    "name": null,
-    "romanized_name": null,
-    "birthday": "2002-06-27",
-    "country": "DE",
-    "race": "P",
-    "rating": 2131,
-    "position": 67,
-    "sum_earnings": 9667
   },
   {
     "id": 238,
@@ -4233,7 +4233,7 @@ var players = [
     "race": "T",
     "rating": 2288,
     "position": 55,
-    "sum_earnings": 8170
+    "sum_earnings": 8206
   },
   {
     "id": 91,
@@ -4270,6 +4270,18 @@ var players = [
     "rating": 1637,
     "position": 131,
     "sum_earnings": 7785
+  },
+  {
+    "id": 15254,
+    "tag": "Mixu",
+    "name": "Mikael Helenius",
+    "romanized_name": null,
+    "birthday": null,
+    "country": "FI",
+    "race": "Z",
+    "rating": 2008,
+    "position": 74,
+    "sum_earnings": 7779
   },
   {
     "id": 99,
@@ -4318,18 +4330,6 @@ var players = [
     "rating": 1703,
     "position": null,
     "sum_earnings": 7738
-  },
-  {
-    "id": 15254,
-    "tag": "Mixu",
-    "name": "Mikael Helenius",
-    "romanized_name": null,
-    "birthday": null,
-    "country": "FI",
-    "race": "Z",
-    "rating": 2008,
-    "position": 74,
-    "sum_earnings": 7727
   },
   {
     "id": 262,
@@ -4680,6 +4680,18 @@ var players = [
     "sum_earnings": 6667
   },
   {
+    "id": 13713,
+    "tag": "Spatz",
+    "name": "Marvin Tiele",
+    "romanized_name": null,
+    "birthday": "2000-08-15",
+    "country": "DE",
+    "race": "P",
+    "rating": 2217,
+    "position": 57,
+    "sum_earnings": 6643
+  },
+  {
     "id": 171,
     "tag": "JangBi",
     "name": "허영무",
@@ -4690,18 +4702,6 @@ var players = [
     "rating": 1731,
     "position": null,
     "sum_earnings": 6627
-  },
-  {
-    "id": 13713,
-    "tag": "Spatz",
-    "name": "Marvin Tiele",
-    "romanized_name": null,
-    "birthday": "2000-08-15",
-    "country": "DE",
-    "race": "P",
-    "rating": 2217,
-    "position": 57,
-    "sum_earnings": 6625
   },
   {
     "id": 4750,
