@@ -45,7 +45,7 @@ var players = [
     "race": "Z",
     "rating": 2929,
     "position": 18,
-    "sum_earnings": 1033342
+    "sum_earnings": 1033442
   },
   {
     "id": 5414,
@@ -57,7 +57,7 @@ var players = [
     "race": "Z",
     "rating": 3276,
     "position": 7,
-    "sum_earnings": 749374
+    "sum_earnings": 749724
   },
   {
     "id": 48,
@@ -129,7 +129,7 @@ var players = [
     "race": "Z",
     "rating": 2712,
     "position": 30,
-    "sum_earnings": 599759
+    "sum_earnings": 599799
   },
   {
     "id": 47,
@@ -141,7 +141,7 @@ var players = [
     "race": "T",
     "rating": 3083,
     "position": 12,
-    "sum_earnings": 598551
+    "sum_earnings": 599031
   },
   {
     "id": 1793,
@@ -189,7 +189,7 @@ var players = [
     "race": "P",
     "rating": 3100,
     "position": 10,
-    "sum_earnings": 531839
+    "sum_earnings": 531999
   },
   {
     "id": 36,
@@ -273,7 +273,7 @@ var players = [
     "race": "T",
     "rating": 3121,
     "position": 9,
-    "sum_earnings": 416830
+    "sum_earnings": 416880
   },
   {
     "id": 13,
@@ -345,7 +345,7 @@ var players = [
     "race": "P",
     "rating": 2821,
     "position": 25,
-    "sum_earnings": 376158
+    "sum_earnings": 376283
   },
   {
     "id": 2170,
@@ -369,7 +369,7 @@ var players = [
     "race": "T",
     "rating": 3456,
     "position": 4,
-    "sum_earnings": 365976
+    "sum_earnings": 366196
   },
   {
     "id": 4,
@@ -429,7 +429,7 @@ var players = [
     "race": "T",
     "rating": 3019,
     "position": 16,
-    "sum_earnings": 313659
+    "sum_earnings": 313709
   },
   {
     "id": 6,
@@ -573,7 +573,7 @@ var players = [
     "race": "P",
     "rating": 2956,
     "position": 17,
-    "sum_earnings": 214829
+    "sum_earnings": 214914
   },
   {
     "id": 4105,
@@ -693,7 +693,7 @@ var players = [
     "race": "P",
     "rating": 2738,
     "position": 28,
-    "sum_earnings": 168683
+    "sum_earnings": 168703
   },
   {
     "id": 145,
@@ -861,7 +861,7 @@ var players = [
     "race": "P",
     "rating": 2639,
     "position": 34,
-    "sum_earnings": 138196
+    "sum_earnings": 138246
   },
   {
     "id": 1557,
@@ -981,7 +981,7 @@ var players = [
     "race": "P",
     "rating": 3583,
     "position": 2,
-    "sum_earnings": 114948
+    "sum_earnings": 115048
   },
   {
     "id": 185,
@@ -1221,7 +1221,7 @@ var players = [
     "race": "P",
     "rating": 2898,
     "position": 20,
-    "sum_earnings": 84774
+    "sum_earnings": 84824
   },
   {
     "id": 4120,
@@ -1305,7 +1305,7 @@ var players = [
     "race": "T",
     "rating": 1936,
     "position": 87,
-    "sum_earnings": 80610
+    "sum_earnings": 80640
   },
   {
     "id": 1660,
@@ -1629,7 +1629,7 @@ var players = [
     "race": "T",
     "rating": 2425,
     "position": 47,
-    "sum_earnings": 54033
+    "sum_earnings": 54088
   },
   {
     "id": 8913,
@@ -1641,7 +1641,7 @@ var players = [
     "race": "P",
     "rating": 2401,
     "position": 49,
-    "sum_earnings": 53541
+    "sum_earnings": 53770
   },
   {
     "id": 13216,
@@ -1653,7 +1653,7 @@ var players = [
     "race": "Z",
     "rating": 2435,
     "position": 46,
-    "sum_earnings": 53522
+    "sum_earnings": 53622
   },
   {
     "id": 9990,
@@ -2025,7 +2025,7 @@ var players = [
     "race": "P",
     "rating": 2884,
     "position": 22,
-    "sum_earnings": 36550
+    "sum_earnings": 36600
   },
   {
     "id": 2567,
@@ -2061,7 +2061,7 @@ var players = [
     "race": "P",
     "rating": 2648,
     "position": 32,
-    "sum_earnings": 34581
+    "sum_earnings": 34676
   },
   {
     "id": 119,
@@ -2829,7 +2829,7 @@ var players = [
     "race": "P",
     "rating": 2602,
     "position": 37,
-    "sum_earnings": 20445
+    "sum_earnings": 20516
   },
   {
     "id": 1819,
@@ -3141,7 +3141,19 @@ var players = [
     "race": "P",
     "rating": 2134,
     "position": 66,
-    "sum_earnings": 16497
+    "sum_earnings": 16532
+  },
+  {
+    "id": 8958,
+    "tag": "Epic",
+    "name": "Alex Damain",
+    "romanized_name": null,
+    "birthday": null,
+    "country": "US",
+    "race": "T",
+    "rating": 2191,
+    "position": 60,
+    "sum_earnings": 16262
   },
   {
     "id": 217,
@@ -3154,18 +3166,6 @@ var players = [
     "rating": 1378,
     "position": null,
     "sum_earnings": 16257
-  },
-  {
-    "id": 8958,
-    "tag": "Epic",
-    "name": "Alex Damain",
-    "romanized_name": null,
-    "birthday": null,
-    "country": "US",
-    "race": "T",
-    "rating": 2191,
-    "position": 60,
-    "sum_earnings": 16246
   },
   {
     "id": 66,
@@ -3264,6 +3264,18 @@ var players = [
     "sum_earnings": 15113
   },
   {
+    "id": 18046,
+    "tag": "YoungYakov",
+    "name": "Яков Моисеенко",
+    "romanized_name": "Yavok Moiseenko",
+    "birthday": "2004-04-15",
+    "country": "RU",
+    "race": "Z",
+    "rating": 2382,
+    "position": 51,
+    "sum_earnings": 14708
+  },
+  {
     "id": 295,
     "tag": "CatZ",
     "name": "Paulo Vizcarra",
@@ -3274,18 +3286,6 @@ var players = [
     "rating": 1569,
     "position": null,
     "sum_earnings": 14642
-  },
-  {
-    "id": 18046,
-    "tag": "YoungYakov",
-    "name": "Яков Моисеенко",
-    "romanized_name": "Yavok Moiseenko",
-    "birthday": "2004-04-15",
-    "country": "RU",
-    "race": "Z",
-    "rating": 2382,
-    "position": 51,
-    "sum_earnings": 14608
   },
   {
     "id": 239,
@@ -3996,6 +3996,18 @@ var players = [
     "sum_earnings": 9969
   },
   {
+    "id": 18651,
+    "tag": "ForJumy",
+    "name": null,
+    "romanized_name": null,
+    "birthday": "2002-06-27",
+    "country": "DE",
+    "race": "P",
+    "rating": 2131,
+    "position": 67,
+    "sum_earnings": 9938
+  },
+  {
     "id": 1625,
     "tag": "Eiki",
     "name": "Eik Johannes Nysted Grødem",
@@ -4006,18 +4018,6 @@ var players = [
     "rating": 1930,
     "position": null,
     "sum_earnings": 9910
-  },
-  {
-    "id": 18651,
-    "tag": "ForJumy",
-    "name": null,
-    "romanized_name": null,
-    "birthday": "2002-06-27",
-    "country": "DE",
-    "race": "P",
-    "rating": 2131,
-    "position": 67,
-    "sum_earnings": 9818
   },
   {
     "id": 2574,
@@ -4233,7 +4233,7 @@ var players = [
     "race": "T",
     "rating": 2288,
     "position": 55,
-    "sum_earnings": 8206
+    "sum_earnings": 8231
   },
   {
     "id": 91,
@@ -4260,6 +4260,18 @@ var players = [
     "sum_earnings": 7930
   },
   {
+    "id": 15254,
+    "tag": "Mixu",
+    "name": "Mikael Helenius",
+    "romanized_name": null,
+    "birthday": null,
+    "country": "FI",
+    "race": "Z",
+    "rating": 2008,
+    "position": 74,
+    "sum_earnings": 7794
+  },
+  {
     "id": 1023,
     "tag": "Couguar",
     "name": "Виталий Рощин",
@@ -4270,18 +4282,6 @@ var players = [
     "rating": 1637,
     "position": 131,
     "sum_earnings": 7785
-  },
-  {
-    "id": 15254,
-    "tag": "Mixu",
-    "name": "Mikael Helenius",
-    "romanized_name": null,
-    "birthday": null,
-    "country": "FI",
-    "race": "Z",
-    "rating": 2008,
-    "position": 74,
-    "sum_earnings": 7779
   },
   {
     "id": 99,
@@ -4677,7 +4677,7 @@ var players = [
     "race": "P",
     "rating": 1845,
     "position": 102,
-    "sum_earnings": 6667
+    "sum_earnings": 6681
   },
   {
     "id": 13713,
