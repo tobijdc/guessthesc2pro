@@ -45,7 +45,7 @@ var players = [
     "race": "Z",
     "rating": 2929,
     "position": 18,
-    "sum_earnings": 1033442
+    "sum_earnings": 1033682
   },
   {
     "id": 5414,
@@ -261,7 +261,7 @@ var players = [
     "race": "Z",
     "rating": 2778,
     "position": 26,
-    "sum_earnings": 440176
+    "sum_earnings": 440226
   },
   {
     "id": 10115,
@@ -345,7 +345,7 @@ var players = [
     "race": "P",
     "rating": 2821,
     "position": 25,
-    "sum_earnings": 376283
+    "sum_earnings": 376339
   },
   {
     "id": 2170,
@@ -969,7 +969,7 @@ var players = [
     "race": "P",
     "rating": 2503,
     "position": 40,
-    "sum_earnings": 118242
+    "sum_earnings": 118292
   },
   {
     "id": 19591,
@@ -981,7 +981,7 @@ var players = [
     "race": "P",
     "rating": 3583,
     "position": 2,
-    "sum_earnings": 115048
+    "sum_earnings": 115298
   },
   {
     "id": 185,
@@ -1221,7 +1221,7 @@ var players = [
     "race": "P",
     "rating": 2898,
     "position": 20,
-    "sum_earnings": 84824
+    "sum_earnings": 85024
   },
   {
     "id": 4120,
@@ -2025,7 +2025,7 @@ var players = [
     "race": "P",
     "rating": 2884,
     "position": 22,
-    "sum_earnings": 36600
+    "sum_earnings": 36800
   },
   {
     "id": 2567,
@@ -2061,7 +2061,7 @@ var players = [
     "race": "P",
     "rating": 2648,
     "position": 32,
-    "sum_earnings": 34676
+    "sum_earnings": 34776
   },
   {
     "id": 119,
@@ -2349,7 +2349,7 @@ var players = [
     "race": "P",
     "rating": 2384,
     "position": 50,
-    "sum_earnings": 29206
+    "sum_earnings": 29306
   },
   {
     "id": 1655,
