@@ -9,7 +9,7 @@ var players = [
     "race": "Z",
     "rating": 3906,
     "position": 1,
-    "sum_earnings": 1476782
+    "sum_earnings": 1626782
   },
   {
     "id": 49,
@@ -21,7 +21,7 @@ var players = [
     "race": "T",
     "rating": 3540,
     "position": 3,
-    "sum_earnings": 1264591
+    "sum_earnings": 1294591
   },
   {
     "id": 76,
@@ -33,7 +33,7 @@ var players = [
     "race": "Z",
     "rating": 3355,
     "position": 6,
-    "sum_earnings": 1064503
+    "sum_earnings": 1144503
   },
   {
     "id": 1662,
@@ -45,7 +45,19 @@ var players = [
     "race": "Z",
     "rating": 2929,
     "position": 18,
-    "sum_earnings": 1033682
+    "sum_earnings": 1033882
+  },
+  {
+    "id": 5878,
+    "tag": "Clem",
+    "name": "Clément Desplanches",
+    "romanized_name": null,
+    "birthday": "2002-04-08",
+    "country": "FR",
+    "race": "T",
+    "rating": 3456,
+    "position": 4,
+    "sum_earnings": 816196
   },
   {
     "id": 5414,
@@ -57,7 +69,7 @@ var players = [
     "race": "Z",
     "rating": 3276,
     "position": 7,
-    "sum_earnings": 749724
+    "sum_earnings": 779724
   },
   {
     "id": 48,
@@ -108,6 +120,42 @@ var players = [
     "sum_earnings": 622197
   },
   {
+    "id": 47,
+    "tag": "ByuN",
+    "name": "변현우",
+    "romanized_name": "Byun Hyun Woo",
+    "birthday": "1993-05-08",
+    "country": "KR",
+    "race": "T",
+    "rating": 3083,
+    "position": 12,
+    "sum_earnings": 619031
+  },
+  {
+    "id": 233,
+    "tag": "herO",
+    "name": "김준호",
+    "romanized_name": "Kim Joon Ho",
+    "birthday": "1992-08-18",
+    "country": "KR",
+    "race": "P",
+    "rating": 3396,
+    "position": 5,
+    "sum_earnings": 617638
+  },
+  {
+    "id": 1793,
+    "tag": "Solar",
+    "name": "강민수",
+    "romanized_name": "Kang Min Soo",
+    "birthday": "1996-05-09",
+    "country": "KR",
+    "race": "Z",
+    "rating": 3100,
+    "position": 11,
+    "sum_earnings": 608898
+  },
+  {
     "id": 309,
     "tag": "Stats",
     "name": "김대엽",
@@ -132,30 +180,6 @@ var players = [
     "sum_earnings": 599799
   },
   {
-    "id": 47,
-    "tag": "ByuN",
-    "name": "변현우",
-    "romanized_name": "Byun Hyun Woo",
-    "birthday": "1993-05-08",
-    "country": "KR",
-    "race": "T",
-    "rating": 3083,
-    "position": 12,
-    "sum_earnings": 599031
-  },
-  {
-    "id": 1793,
-    "tag": "Solar",
-    "name": "강민수",
-    "romanized_name": "Kang Min Soo",
-    "birthday": "1996-05-09",
-    "country": "KR",
-    "race": "Z",
-    "rating": 3100,
-    "position": 11,
-    "sum_earnings": 588898
-  },
-  {
     "id": 4495,
     "tag": "Neeb",
     "name": "Alex Sunderhaft",
@@ -168,18 +192,6 @@ var players = [
     "sum_earnings": 587837
   },
   {
-    "id": 233,
-    "tag": "herO",
-    "name": "김준호",
-    "romanized_name": "Kim Joon Ho",
-    "birthday": "1992-08-18",
-    "country": "KR",
-    "race": "P",
-    "rating": 3396,
-    "position": 5,
-    "sum_earnings": 537638
-  },
-  {
     "id": 186,
     "tag": "Classic",
     "name": "김도우",
@@ -189,7 +201,7 @@ var players = [
     "race": "P",
     "rating": 3100,
     "position": 10,
-    "sum_earnings": 531999
+    "sum_earnings": 551999
   },
   {
     "id": 36,
@@ -264,6 +276,18 @@ var players = [
     "sum_earnings": 440226
   },
   {
+    "id": 1665,
+    "tag": "Cure",
+    "name": "김도욱",
+    "romanized_name": "Kim Doh Wook",
+    "birthday": "1994-11-25",
+    "country": "KR",
+    "race": "T",
+    "rating": 3157,
+    "position": 8,
+    "sum_earnings": 435492
+  },
+  {
     "id": 10115,
     "tag": "Oliveira",
     "name": "李培楠",
@@ -273,7 +297,7 @@ var players = [
     "race": "T",
     "rating": 3121,
     "position": 9,
-    "sum_earnings": 416880
+    "sum_earnings": 431880
   },
   {
     "id": 13,
@@ -288,16 +312,16 @@ var players = [
     "sum_earnings": 408481
   },
   {
-    "id": 1665,
-    "tag": "Cure",
-    "name": "김도욱",
-    "romanized_name": "Kim Doh Wook",
-    "birthday": "1994-11-25",
-    "country": "KR",
-    "race": "T",
-    "rating": 3157,
-    "position": 8,
-    "sum_earnings": 390492
+    "id": 2170,
+    "tag": "ShoWTimE",
+    "name": "Tobias Sieber",
+    "romanized_name": null,
+    "birthday": "1994-02-23",
+    "country": "DE",
+    "race": "P",
+    "rating": 3023,
+    "position": 15,
+    "sum_earnings": 388569
   },
   {
     "id": 28,
@@ -348,28 +372,28 @@ var players = [
     "sum_earnings": 376339
   },
   {
-    "id": 2170,
-    "tag": "ShoWTimE",
-    "name": "Tobias Sieber",
+    "id": 258,
+    "tag": "HeRoMaRinE",
+    "name": "Gabriel Segat",
     "romanized_name": null,
-    "birthday": "1994-02-23",
+    "birthday": "1997-07-04",
     "country": "DE",
-    "race": "P",
-    "rating": 3023,
-    "position": 15,
-    "sum_earnings": 373569
+    "race": "T",
+    "rating": 3076,
+    "position": 14,
+    "sum_earnings": 342879
   },
   {
-    "id": 5878,
-    "tag": "Clem",
-    "name": "Clément Desplanches",
-    "romanized_name": null,
-    "birthday": "2002-04-08",
-    "country": "FR",
+    "id": 44,
+    "tag": "GuMiho",
+    "name": "고병재",
+    "romanized_name": "Koh Byung Jae",
+    "birthday": "1992-08-04",
+    "country": "KR",
     "race": "T",
-    "rating": 3456,
-    "position": 4,
-    "sum_earnings": 366196
+    "rating": 3019,
+    "position": 16,
+    "sum_earnings": 333709
   },
   {
     "id": 4,
@@ -396,18 +420,6 @@ var players = [
     "sum_earnings": 328584
   },
   {
-    "id": 258,
-    "tag": "HeRoMaRinE",
-    "name": "Gabriel Segat",
-    "romanized_name": null,
-    "birthday": "1997-07-04",
-    "country": "DE",
-    "race": "T",
-    "rating": 3076,
-    "position": 14,
-    "sum_earnings": 327829
-  },
-  {
     "id": 10,
     "tag": "Stephano",
     "name": "Ilyes Satouri",
@@ -418,18 +430,6 @@ var players = [
     "rating": 2182,
     "position": null,
     "sum_earnings": 315444
-  },
-  {
-    "id": 44,
-    "tag": "GuMiho",
-    "name": "고병재",
-    "romanized_name": "Koh Byung Jae",
-    "birthday": "1992-08-04",
-    "country": "KR",
-    "race": "T",
-    "rating": 3019,
-    "position": 16,
-    "sum_earnings": 313709
   },
   {
     "id": 6,
@@ -492,6 +492,18 @@ var players = [
     "sum_earnings": 255663
   },
   {
+    "id": 117,
+    "tag": "SHIN",
+    "name": "신희범",
+    "romanized_name": "Shin Hee Bum",
+    "birthday": "1996-09-03",
+    "country": "KR",
+    "race": "Z",
+    "rating": 3081,
+    "position": 13,
+    "sum_earnings": 238165
+  },
+  {
     "id": 15,
     "tag": "HyuN",
     "name": "고석현",
@@ -540,18 +552,6 @@ var players = [
     "sum_earnings": 224029
   },
   {
-    "id": 117,
-    "tag": "SHIN",
-    "name": "신희범",
-    "romanized_name": "Shin Hee Bum",
-    "birthday": "1996-09-03",
-    "country": "KR",
-    "race": "Z",
-    "rating": 3081,
-    "position": 13,
-    "sum_earnings": 223165
-  },
-  {
     "id": 73,
     "tag": "Jaedong",
     "name": "이제동",
@@ -573,7 +573,7 @@ var players = [
     "race": "P",
     "rating": 2956,
     "position": 17,
-    "sum_earnings": 214914
+    "sum_earnings": 214964
   },
   {
     "id": 4105,
@@ -622,6 +622,18 @@ var players = [
     "rating": 2148,
     "position": null,
     "sum_earnings": 186605
+  },
+  {
+    "id": 4134,
+    "tag": "Astrea",
+    "name": "Max Angel",
+    "romanized_name": null,
+    "birthday": "1997-03-08",
+    "country": "US",
+    "race": "P",
+    "rating": 2738,
+    "position": 28,
+    "sum_earnings": 183703
   },
   {
     "id": 422,
@@ -682,18 +694,6 @@ var players = [
     "rating": 2233,
     "position": 56,
     "sum_earnings": 174252
-  },
-  {
-    "id": 4134,
-    "tag": "Astrea",
-    "name": "Max Angel",
-    "romanized_name": null,
-    "birthday": "1997-03-08",
-    "country": "US",
-    "race": "P",
-    "rating": 2738,
-    "position": 28,
-    "sum_earnings": 168703
   },
   {
     "id": 145,
@@ -766,6 +766,18 @@ var players = [
     "rating": 2149,
     "position": null,
     "sum_earnings": 147810
+  },
+  {
+    "id": 4452,
+    "tag": "Spirit",
+    "name": "Piotr Walukiewicz",
+    "romanized_name": null,
+    "birthday": "1998-10-08",
+    "country": "PL",
+    "race": "T",
+    "rating": 2856,
+    "position": 24,
+    "sum_earnings": 146018
   },
   {
     "id": 5945,
@@ -898,18 +910,6 @@ var players = [
     "rating": 2681,
     "position": 31,
     "sum_earnings": 133901
-  },
-  {
-    "id": 4452,
-    "tag": "Spirit",
-    "name": "Piotr Walukiewicz",
-    "romanized_name": null,
-    "birthday": "1998-10-08",
-    "country": "PL",
-    "race": "T",
-    "rating": 2856,
-    "position": 24,
-    "sum_earnings": 130968
   },
   {
     "id": 109,
@@ -1209,7 +1209,7 @@ var players = [
     "race": "Z",
     "rating": 2182,
     "position": 62,
-    "sum_earnings": 85672
+    "sum_earnings": 85722
   },
   {
     "id": 8676,
@@ -1221,7 +1221,7 @@ var players = [
     "race": "P",
     "rating": 2898,
     "position": 20,
-    "sum_earnings": 85024
+    "sum_earnings": 85224
   },
   {
     "id": 4120,
@@ -1584,6 +1584,18 @@ var players = [
     "sum_earnings": 57270
   },
   {
+    "id": 8980,
+    "tag": "Coffee",
+    "name": "吴奕棽",
+    "romanized_name": "Wu Yishen",
+    "birthday": "1999-12-05",
+    "country": "CN",
+    "race": "T",
+    "rating": 2450,
+    "position": 42,
+    "sum_earnings": 56921
+  },
+  {
     "id": 32,
     "tag": "SuperNova",
     "name": "김영진",
@@ -1641,7 +1653,7 @@ var players = [
     "race": "P",
     "rating": 2401,
     "position": 49,
-    "sum_earnings": 53770
+    "sum_earnings": 53870
   },
   {
     "id": 13216,
@@ -1857,19 +1869,7 @@ var players = [
     "race": "P",
     "rating": 2642,
     "position": 33,
-    "sum_earnings": 41991
-  },
-  {
-    "id": 8980,
-    "tag": "Coffee",
-    "name": "吴奕棽",
-    "romanized_name": "Wu Yishen",
-    "birthday": "1999-12-05",
-    "country": "CN",
-    "race": "T",
-    "rating": 2450,
-    "position": 42,
-    "sum_earnings": 41921
+    "sum_earnings": 42041
   },
   {
     "id": 169,
@@ -2004,6 +2004,18 @@ var players = [
     "sum_earnings": 37154
   },
   {
+    "id": 8148,
+    "tag": "NightMare",
+    "name": "장욱",
+    "romanized_name": "Jang Wook",
+    "birthday": "1999-02-23",
+    "country": "KR",
+    "race": "P",
+    "rating": 2884,
+    "position": 22,
+    "sum_earnings": 36907
+  },
+  {
     "id": 87,
     "tag": "Golden",
     "name": "조명환",
@@ -2014,18 +2026,6 @@ var players = [
     "rating": 1698,
     "position": null,
     "sum_earnings": 36892
-  },
-  {
-    "id": 8148,
-    "tag": "NightMare",
-    "name": "장욱",
-    "romanized_name": "Jang Wook",
-    "birthday": "1999-02-23",
-    "country": "KR",
-    "race": "P",
-    "rating": 2884,
-    "position": 22,
-    "sum_earnings": 36800
   },
   {
     "id": 2567,
@@ -2061,7 +2061,7 @@ var players = [
     "race": "P",
     "rating": 2648,
     "position": 32,
-    "sum_earnings": 34776
+    "sum_earnings": 34939
   },
   {
     "id": 119,
@@ -2325,7 +2325,7 @@ var players = [
     "race": "Z",
     "rating": 2175,
     "position": 63,
-    "sum_earnings": 29507
+    "sum_earnings": 29516
   },
   {
     "id": 747,
@@ -2685,7 +2685,7 @@ var players = [
     "race": "T",
     "rating": 2190,
     "position": 61,
-    "sum_earnings": 22910
+    "sum_earnings": 22939
   },
   {
     "id": 537,
@@ -3273,7 +3273,7 @@ var players = [
     "race": "Z",
     "rating": 2382,
     "position": 51,
-    "sum_earnings": 14708
+    "sum_earnings": 14788
   },
   {
     "id": 295,
@@ -3984,6 +3984,18 @@ var players = [
     "sum_earnings": 10031
   },
   {
+    "id": 18651,
+    "tag": "ForJumy",
+    "name": null,
+    "romanized_name": null,
+    "birthday": "2002-06-27",
+    "country": "DE",
+    "race": "P",
+    "rating": 2131,
+    "position": 67,
+    "sum_earnings": 9986
+  },
+  {
     "id": 225,
     "tag": "Maka",
     "name": "곽한얼",
@@ -3994,18 +4006,6 @@ var players = [
     "rating": 1080,
     "position": null,
     "sum_earnings": 9969
-  },
-  {
-    "id": 18651,
-    "tag": "ForJumy",
-    "name": null,
-    "romanized_name": null,
-    "birthday": "2002-06-27",
-    "country": "DE",
-    "race": "P",
-    "rating": 2131,
-    "position": 67,
-    "sum_earnings": 9938
   },
   {
     "id": 1625,
@@ -4257,7 +4257,7 @@ var players = [
     "race": "Z",
     "rating": 2008,
     "position": 74,
-    "sum_earnings": 7944
+    "sum_earnings": 7951
   },
   {
     "id": 10051,
@@ -4632,6 +4632,18 @@ var players = [
     "sum_earnings": 6746
   },
   {
+    "id": 16991,
+    "tag": "NightPhoenix",
+    "name": "Олексій Захарчук",
+    "romanized_name": "Oleksiy Zakharchuk",
+    "birthday": "2005-05-17",
+    "country": "UA",
+    "race": "P",
+    "rating": 2051,
+    "position": 71,
+    "sum_earnings": 6728
+  },
+  {
     "id": 9212,
     "tag": "Arctur",
     "name": "Алексей Рожнов",
@@ -4642,18 +4654,6 @@ var players = [
     "rating": 1876,
     "position": null,
     "sum_earnings": 6715
-  },
-  {
-    "id": 16991,
-    "tag": "NightPhoenix",
-    "name": "Олексій Захарчук",
-    "romanized_name": "Oleksiy Zakharchuk",
-    "birthday": "2005-05-17",
-    "country": "UA",
-    "race": "P",
-    "rating": 2051,
-    "position": 71,
-    "sum_earnings": 6713
   },
   {
     "id": 652,
