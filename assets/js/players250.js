@@ -31,9 +31,9 @@ var players = [
     "birthday": "1995-10-06",
     "country": "KR",
     "race": "Z",
-    "rating": 3320,
+    "rating": 3330,
     "position": 6,
-    "sum_earnings": 1144743
+    "sum_earnings": 1144843
   },
   {
     "id": 1662,
@@ -43,7 +43,7 @@ var players = [
     "birthday": "1994-01-13",
     "country": "KR",
     "race": "Z",
-    "rating": 2963,
+    "rating": 2981,
     "position": 17,
     "sum_earnings": 1033882
   },
@@ -55,9 +55,9 @@ var players = [
     "birthday": "2002-04-08",
     "country": "FR",
     "race": "T",
-    "rating": 3804,
+    "rating": 3780,
     "position": 2,
-    "sum_earnings": 819723
+    "sum_earnings": 819973
   },
   {
     "id": 5414,
@@ -127,9 +127,9 @@ var players = [
     "birthday": "1993-05-08",
     "country": "KR",
     "race": "T",
-    "rating": 3170,
-    "position": 10,
-    "sum_earnings": 620213
+    "rating": 3192,
+    "position": 9,
+    "sum_earnings": 620728
   },
   {
     "id": 233,
@@ -272,7 +272,7 @@ var players = [
     "country": "CA",
     "race": "Z",
     "rating": 2789,
-    "position": 25,
+    "position": 24,
     "sum_earnings": 440226
   },
   {
@@ -283,9 +283,9 @@ var players = [
     "birthday": "1994-11-25",
     "country": "KR",
     "race": "T",
-    "rating": 3179,
-    "position": 9,
-    "sum_earnings": 435542
+    "rating": 3155,
+    "position": 10,
+    "sum_earnings": 435577
   },
   {
     "id": 10115,
@@ -319,9 +319,9 @@ var players = [
     "birthday": "1994-02-23",
     "country": "DE",
     "race": "P",
-    "rating": 3034,
+    "rating": 3040,
     "position": 14,
-    "sum_earnings": 389334
+    "sum_earnings": 389384
   },
   {
     "id": 28,
@@ -367,9 +367,9 @@ var players = [
     "birthday": "1994-03-24",
     "country": "KR",
     "race": "P",
-    "rating": 2846,
-    "position": 21,
-    "sum_earnings": 376529
+    "rating": 2910,
+    "position": 19,
+    "sum_earnings": 376564
   },
   {
     "id": 258,
@@ -379,9 +379,9 @@ var players = [
     "birthday": "1997-07-04",
     "country": "DE",
     "race": "T",
-    "rating": 3018,
+    "rating": 3008,
     "position": 15,
-    "sum_earnings": 342879
+    "sum_earnings": 343029
   },
   {
     "id": 44,
@@ -391,7 +391,7 @@ var players = [
     "birthday": "1992-08-04",
     "country": "KR",
     "race": "T",
-    "rating": 3007,
+    "rating": 2997,
     "position": 16,
     "sum_earnings": 333894
   },
@@ -499,9 +499,9 @@ var players = [
     "birthday": "1996-09-03",
     "country": "KR",
     "race": "Z",
-    "rating": 3084,
+    "rating": 3097,
     "position": 11,
-    "sum_earnings": 238920
+    "sum_earnings": 239155
   },
   {
     "id": 58,
@@ -511,7 +511,7 @@ var players = [
     "birthday": "1993-12-14",
     "country": "PL",
     "race": "P",
-    "rating": 2648,
+    "rating": 2645,
     "position": 31,
     "sum_earnings": 234850
   },
@@ -571,9 +571,9 @@ var players = [
     "birthday": "1997-02-23",
     "country": "KR",
     "race": "P",
-    "rating": 2920,
+    "rating": 2962,
     "position": 18,
-    "sum_earnings": 214964
+    "sum_earnings": 215049
   },
   {
     "id": 4105,
@@ -631,9 +631,9 @@ var players = [
     "birthday": "1997-03-08",
     "country": "US",
     "race": "P",
-    "rating": 2682,
-    "position": 29,
-    "sum_earnings": 183703
+    "rating": 2677,
+    "position": 30,
+    "sum_earnings": 183803
   },
   {
     "id": 422,
@@ -692,7 +692,7 @@ var players = [
     "country": "NL",
     "race": "R",
     "rating": 2252,
-    "position": 51,
+    "position": null,
     "sum_earnings": 174252
   },
   {
@@ -703,8 +703,8 @@ var players = [
     "birthday": "1995-11-10",
     "country": "DE",
     "race": "Z",
-    "rating": 2893,
-    "position": 19,
+    "rating": 2894,
+    "position": 20,
     "sum_earnings": 153149
   },
   {
@@ -859,9 +859,9 @@ var players = [
     "birthday": "1994-07-28",
     "country": "NL",
     "race": "P",
-    "rating": 2617,
-    "position": 32,
-    "sum_earnings": 138714
+    "rating": 2610,
+    "position": 34,
+    "sum_earnings": 138764
   },
   {
     "id": 129,
@@ -907,8 +907,8 @@ var players = [
     "birthday": "1991-04-16",
     "country": "KR",
     "race": "T",
-    "rating": 2663,
-    "position": 30,
+    "rating": 2686,
+    "position": 29,
     "sum_earnings": 133936
   },
   {
@@ -955,8 +955,8 @@ var players = [
     "birthday": "1997-02-19",
     "country": "MX",
     "race": "Z",
-    "rating": 2436,
-    "position": 40,
+    "rating": 2438,
+    "position": 39,
     "sum_earnings": 121068
   },
   {
@@ -979,9 +979,9 @@ var players = [
     "birthday": "2004-07-01",
     "country": "DK",
     "race": "P",
-    "rating": 3589,
+    "rating": 3551,
     "position": 3,
-    "sum_earnings": 116515
+    "sum_earnings": 116715
   },
   {
     "id": 185,
@@ -1112,7 +1112,7 @@ var players = [
     "country": "TW",
     "race": "P",
     "rating": 2181,
-    "position": 58,
+    "position": 55,
     "sum_earnings": 94783
   },
   {
@@ -1208,8 +1208,8 @@ var players = [
     "country": "SE",
     "race": "Z",
     "rating": 2198,
-    "position": 56,
-    "sum_earnings": 85792
+    "position": 53,
+    "sum_earnings": 85862
   },
   {
     "id": 8676,
@@ -1219,8 +1219,8 @@ var players = [
     "birthday": "2001-04-17",
     "country": "RU",
     "race": "P",
-    "rating": 2857,
-    "position": 20,
+    "rating": 2859,
+    "position": 21,
     "sum_earnings": 85707
   },
   {
@@ -1304,7 +1304,7 @@ var players = [
     "country": "CN",
     "race": "T",
     "rating": 1865,
-    "position": 87,
+    "position": 83,
     "sum_earnings": 80640
   },
   {
@@ -1316,7 +1316,7 @@ var players = [
     "country": "FR",
     "race": "P",
     "rating": 2385,
-    "position": 44,
+    "position": 43,
     "sum_earnings": 80511
   },
   {
@@ -1592,7 +1592,7 @@ var players = [
     "country": "CN",
     "race": "T",
     "rating": 2406,
-    "position": 42,
+    "position": 40,
     "sum_earnings": 56921
   },
   {
@@ -1628,7 +1628,7 @@ var players = [
     "country": "DE",
     "race": "P",
     "rating": 2453,
-    "position": 39,
+    "position": null,
     "sum_earnings": 56092
   },
   {
@@ -1639,9 +1639,9 @@ var players = [
     "birthday": "1998-10-16",
     "country": "PL",
     "race": "P",
-    "rating": 2415,
+    "rating": 2404,
     "position": 41,
-    "sum_earnings": 54774
+    "sum_earnings": 54928
   },
   {
     "id": 13017,
@@ -1652,7 +1652,7 @@ var players = [
     "country": "US",
     "race": "T",
     "rating": 2365,
-    "position": 47,
+    "position": 46,
     "sum_earnings": 54088
   },
   {
@@ -1712,8 +1712,20 @@ var players = [
     "country": "CN",
     "race": "P",
     "rating": 2374,
-    "position": 46,
+    "position": 44,
     "sum_earnings": 50640
+  },
+  {
+    "id": 21244,
+    "tag": "trigger",
+    "name": null,
+    "romanized_name": null,
+    "birthday": "2002-07-11",
+    "country": "CA",
+    "race": "P",
+    "rating": 2584,
+    "position": 35,
+    "sum_earnings": 49197
   },
   {
     "id": 4388,
@@ -1726,18 +1738,6 @@ var players = [
     "rating": 1822,
     "position": null,
     "sum_earnings": 49180
-  },
-  {
-    "id": 21244,
-    "tag": "trigger",
-    "name": null,
-    "romanized_name": null,
-    "birthday": "2002-07-11",
-    "country": "CA",
-    "race": "P",
-    "rating": 2560,
-    "position": 35,
-    "sum_earnings": 49107
   },
   {
     "id": 300,
@@ -1819,9 +1819,9 @@ var players = [
     "birthday": "1994-01-12",
     "country": "VN",
     "race": "Z",
-    "rating": 1923,
-    "position": 78,
-    "sum_earnings": 43639
+    "rating": 1950,
+    "position": 73,
+    "sum_earnings": 43761
   },
   {
     "id": 103,
@@ -1915,8 +1915,8 @@ var players = [
     "birthday": "1993-04-23",
     "country": "TW",
     "race": "Z",
-    "rating": 2016,
-    "position": 67,
+    "rating": 2015,
+    "position": 65,
     "sum_earnings": 40589
   },
   {
@@ -2011,8 +2011,8 @@ var players = [
     "birthday": "1999-02-23",
     "country": "KR",
     "race": "P",
-    "rating": 2797,
-    "position": 24,
+    "rating": 2774,
+    "position": 25,
     "sum_earnings": 37128
   },
   {
@@ -2047,9 +2047,9 @@ var players = [
     "birthday": "2004-01-29",
     "country": "PL",
     "race": "P",
-    "rating": 2607,
-    "position": 33,
-    "sum_earnings": 35396
+    "rating": 2623,
+    "position": 32,
+    "sum_earnings": 35450
   },
   {
     "id": 121,
@@ -2275,8 +2275,8 @@ var players = [
     "birthday": "1988-12-11",
     "country": "AU",
     "race": "Z",
-    "rating": 1645,
-    "position": 111,
+    "rating": 1649,
+    "position": 107,
     "sum_earnings": 30027
   },
   {
@@ -2312,7 +2312,7 @@ var players = [
     "country": "BR",
     "race": "Z",
     "rating": 2223,
-    "position": 53,
+    "position": 50,
     "sum_earnings": 29564
   },
   {
@@ -2336,7 +2336,7 @@ var players = [
     "country": "HR",
     "race": "P",
     "rating": 2396,
-    "position": 43,
+    "position": 42,
     "sum_earnings": 29366
   },
   {
@@ -2431,9 +2431,9 @@ var players = [
     "birthday": "2000-11-23",
     "country": "US",
     "race": "T",
-    "rating": 1959,
-    "position": 75,
-    "sum_earnings": 27361
+    "rating": 1965,
+    "position": 72,
+    "sum_earnings": 27401
   },
   {
     "id": 189,
@@ -2683,8 +2683,8 @@ var players = [
     "birthday": "2003-02-19",
     "country": "RU",
     "race": "T",
-    "rating": 2185,
-    "position": 57,
+    "rating": 2183,
+    "position": 54,
     "sum_earnings": 22990
   },
   {
@@ -2720,7 +2720,7 @@ var players = [
     "country": "HK",
     "race": "Z",
     "rating": 1973,
-    "position": 73,
+    "position": 70,
     "sum_earnings": 22347
   },
   {
@@ -2755,8 +2755,8 @@ var players = [
     "birthday": "1989-07-18",
     "country": "JP",
     "race": "T",
-    "rating": 1895,
-    "position": 80,
+    "rating": 1897,
+    "position": 78,
     "sum_earnings": 21693
   },
   {
@@ -2815,9 +2815,9 @@ var players = [
     "birthday": "1997-03-04",
     "country": "RU",
     "race": "P",
-    "rating": 2604,
-    "position": 34,
-    "sum_earnings": 20627
+    "rating": 2616,
+    "position": 33,
+    "sum_earnings": 20693
   },
   {
     "id": 219,
@@ -2851,7 +2851,7 @@ var players = [
     "birthday": null,
     "country": "IN",
     "race": "Z",
-    "rating": 1629,
+    "rating": 1612,
     "position": 114,
     "sum_earnings": 20351
   },
