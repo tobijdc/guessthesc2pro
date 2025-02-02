@@ -33,7 +33,8 @@ StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, I
 
 {{<details  "Changelog">}}
 - 2025-02-02
-  - 
+  - Small technical improvements
+  - Unlist Katowice 2024 from header
 - 2024-02-28:
   - Open Source
 - 2024-02-24:
