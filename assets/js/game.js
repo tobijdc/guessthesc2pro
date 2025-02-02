@@ -102,7 +102,7 @@ function search(event) {
 // ----- GUESSING & RENDERING -----
 
 function formatRace(race) {
-    const imgPrefix = "<img class=\"race-icon\" height=\"20px\" src=\"/img/";
+    const imgPrefix = "<img class=\"race-icon\" height=\"20px\" width=\"20px\" src=\"/img/";
     if (race === "P") {
         return imgPrefix + "protoss.svg\" alt=\"P\" />";
     } else if (race === "T") {
