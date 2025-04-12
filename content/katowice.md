@@ -1,6 +1,6 @@
 +++
 title = "Guess the SC2 Pro - Katowice 2024 Edition"
-description = "Can you name the StarCraft 2 pro? 🏆 Guess the SC2 player using clues like age, prize money, and nationality! Test your esports knowledge in this fun, free, Wordle-style guessing game. Play now and challenge yourself!"
+description = "Free SC2 Pro Player Guessing Game. Guess the StarCraft 2 pro using nationality & prize money clues. Test your esports knowledge! Wordle style."
 author = "tobijdc"
 draft = false
 type = "page"
