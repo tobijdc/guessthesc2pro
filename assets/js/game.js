@@ -468,17 +468,6 @@ function socialGrid(guessArray) {
     return grid;
 }
 
-function howToPlayDialog() {
-    const dialog = document.getElementById("howToPlay");
-    const dialogCloseButton = document.getElementById("howToPlayClose");
-
-    dialogCloseButton.addEventListener("click", () => {
-        document.getElementById("howToPlay").close();
-    });
-
-    dialog.showModal();
-}
-
 function socialDialog() {
     const dialog = document.getElementById("socialDialog");
     const dialogCloseButton = document.getElementById("socialDialogButton");

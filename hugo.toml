@@ -2,16 +2,14 @@ baseURL = "https://guessthesc2pro.com/"
 title = "Guess the SC2 Pro"
 author = "tobijdc"
 copyright = "Tobias Ibounig"
-pagination.pagerSize = 10
+paginate = 10
 languageCode = "en"
-theme = "anubis2"
+theme = "anubis"
 enableRobotsTXT = true
 enableEmoji = true
 
-# Anubis2
-rssAsSocialIcon = false
-locale = "en-us"
-toc = false
+disqusShortname = ""
+googleAnalytics = ""
 
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
@@ -56,15 +54,3 @@ ignoreErrors = ["error-disable-taxonomy"]
     name = "About"
     pageRef = "/about"
     weight = 50
-
-# Anubis2
-
-[params.anubis2]
-    enableMathGlobally = false # MathJax (default is false)
-    enableCopyCodeButton = false
-    enableReadMoreButton = false
-    hideFooterAttribution = false # hide "Powered by Hugo, theme" in footer
-    colorTheme = "auto"
-    enableColorThemeSwitcher = true
-
-social = []
