@@ -34,9 +34,24 @@
     </div>
 </details>
 
+<div id="howToPlayLink">
+    <a onclick="howToPlayDialog()">How To Play?</a>
+</div>
+
 <dialog id="socialDialog">
-    <div class="unselectable">Share on Twitter:<br /><br /></div>
+    <div class="unselectable">Share on Twitter/Bluesky:<br /><br /></div>
     <div id="socialTwitterText"></div>
     <br />
     <button autofocus id="socialDialogButton" class="button">Close</button>
+</dialog>
+
+<dialog id="howToPlay">
+    <div class="unselectable">How to play:<br /><br /></div>
+    <div id="howToPlayText">
+        Guess the SC2 Pro is all about guessing a SC2 player.
+        You will get hints initially from which you need to determine the player.
+        <img href="/img/how_to_play_1.png" alt="image showing initial game state" />
+    </div>
+    <br />
+    <button autofocus id="howToPlayClose" class="button">Close</button>
 </dialog>

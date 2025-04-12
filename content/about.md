@@ -1,16 +1,16 @@
 +++
 title = "About 'Guess the SC2 pro'"
-description = "About who and how the game was created."
+description = "The SC2 themed guessing game: About who and how the game was created."
 author = "tobijdc"
 draft = false
 +++
 
-You have to guess the SC2 player in a cetain amount of tries.
+You have to guess the SC2 player in a certain amount of tries.
 With every try you will see how the guessed player compares to the player we are looking for.
 
 I hope you enjoy.
 
-If you like the game, hit be up on Twitter. I'm [@tobijdc](https://twitter.com/tobijdc).
+If you like the game, hit be up on Bluesky. I'm [@tobijdc](https://bsky.app/profile/tobijdc.bsky.social).
 
 ## Data and Icons
 
@@ -32,6 +32,13 @@ StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, I
 ## Changelog
 
 {{<details  "Changelog">}}
+- 2025-04-XX
+  - Technical improvements
+    - Switch to Anubis 2
+    - Dark mode
+    - Meta descriptions
+  - Added How to Play
+  - More Bluesky
 - 2025-02-02
   - Small technical improvements
   - Unlist Katowice 2024 from header
