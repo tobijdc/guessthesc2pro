@@ -1,11 +1,11 @@
 +++
 title = "About 'Guess the SC2 pro'"
-description = "The SC2 themed guessing game: About who and how the game was created."
+description = "About who and how the game was created."
 author = "tobijdc"
 draft = false
 +++
 
-You have to guess the SC2 player in a certain amount of tries.
+You have to guess the SC2 player in a cetain amount of tries.
 With every try you will see how the guessed player compares to the player we are looking for.
 
 I hope you enjoy.
