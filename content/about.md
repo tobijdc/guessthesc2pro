@@ -10,7 +10,7 @@ With every try you will see how the guessed player compares to the player we are
 
 I hope you enjoy.
 
-If you like the game, hit be up on Bluesky. I'm [@tobijdc](https://bsky.app/profile/tobijdc.bsky.social).
+If you like the game, hit be up on Bluesky <i class="fa-brands fa-bluesky"></i>. I'm [@tobijdc](https://bsky.app/profile/tobijdc.bsky.social).
 
 ## Data and Icons
 
@@ -32,13 +32,16 @@ StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, I
 ## Changelog
 
 {{<details  "Changelog">}}
-- 2025-04-XX
+- 2025-04-13
   - Technical improvements
     - Switch to Anubis 2
+    - Update Dependencies
     - Dark mode
     - Meta descriptions
-  - Added How to Play
+    - etc.
+  - Added "How to Play"
   - More Bluesky
+  - Dialogs have close button up top too
 - 2025-02-02
   - Small technical improvements
   - Unlist Katowice 2024 from header
