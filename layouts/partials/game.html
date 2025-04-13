@@ -27,18 +27,22 @@
 
 <br />
 
+<p>
 <details id="playerListDetails" onmouseup="playersList(); this.onmouseup=null;">
     <summary>Player List (by earnings)</summary>
     <div id="player-display" class="column-text">
         Click here to load 
     </div>
 </details>
-
-<div id="howToPlayLink">
-    <a onclick="howToPlayDialog()">How To Play?</a>
-</div>
+</p>
+<p>
+    <div id="howToPlayLink">
+        <a onclick="howToPlayDialog()"><i class="fa-regular fa-circle-question"></i> How To Play</a>
+    </div>
+</p>
 
 <dialog id="socialDialog">
+    <i id="socialDialogX" class="fa-regular fa-circle-xmark" style="float: right;"></i>
     <div class="unselectable">Share on Twitter/Bluesky:<br /><br /></div>
     <div id="socialTwitterText"></div>
     <br />
@@ -46,11 +50,27 @@
 </dialog>
 
 <dialog id="howToPlay">
-    <div class="unselectable">How to play:<br /><br /></div>
+    <i id="howToPlayX" class="fa-regular fa-circle-xmark" style="float: right;"></i>
+    <h3>How to play:</h3>
     <div id="howToPlayText">
         Guess the SC2 Pro is all about guessing a SC2 player.
         You will get hints initially from which you need to determine the player.
-        <img href="/img/how_to_play_1.png" alt="image showing initial game state" />
+        <p>
+            <img src="/img/how_to_play_1.png" alt="image showing initial game state"
+            loading="lazy" />
+        </p>
+        Once you make a guess, if it is wrong, you will see what mismatched compared to the mystery player.
+        Fo reference you can always expand the "Player List" in the bottom, it is sorted by tournament winnings.
+        <p>
+            <img src="/img/how_to_play_2.png" alt="image showing initial game state"
+            loading="lazy" />
+        </p>
+        Guess correctly within the allowed number of guesses, you win.
+        Play again by pressing "Reset Game".
+        <p>
+            <img src="/img/how_to_play_3.png" alt="image showing initial game state"
+            loading="lazy" />
+        </p>
     </div>
     <br />
     <button autofocus id="howToPlayClose" class="button">Close</button>

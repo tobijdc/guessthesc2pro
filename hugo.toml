@@ -67,4 +67,6 @@ ignoreErrors = ["error-disable-taxonomy"]
     colorTheme = "auto"
     enableColorThemeSwitcher = true
 
+    customCSS = ["custom-css/custom.css"]
+
 social = []

@@ -468,30 +468,37 @@ function socialGrid(guessArray) {
     return grid;
 }
 
-function howToPlayDialog() {
-    const dialog = document.getElementById("howToPlay");
-    const dialogCloseButton = document.getElementById("howToPlayClose");
-
-    dialogCloseButton.addEventListener("click", () => {
-        document.getElementById("howToPlay").close();
-    });
-
-    dialog.showModal();
-}
-
 function socialDialog() {
     const dialog = document.getElementById("socialDialog");
     const dialogCloseButton = document.getElementById("socialDialogButton");
+    const socialDialogX = document.getElementById("socialDialogX");
     var socialTwitterDiv = document.getElementById("socialTwitterText");
     var socialTwitterButton = document.getElementById("twitter-share-button");
 
     dialogCloseButton.addEventListener("click", () => {
         document.getElementById("socialDialog").close();
     });
-
+    socialDialogX.addEventListener("click", () => {
+        document.getElementById("socialDialog").close();
+    });
 
     var socialText = "I played #guessthesc2pro<br/><br/>" + socialGrid(guessesCompares);
     socialTwitterDiv.innerHTML = socialText + "<br/>Try it out: https://guessthesc2pro.com";
+    dialog.showModal();
+}
+
+function howToPlayDialog() {
+    const dialog = document.getElementById("howToPlay");
+    const dialogCloseX = document.getElementById("howToPlayX");
+    const dialogCloseButton = document.getElementById("howToPlayClose");
+
+    dialogCloseButton.addEventListener("click", () => {
+        document.getElementById("howToPlay").close();
+    });
+    dialogCloseX.addEventListener("click", () => {
+        document.getElementById("howToPlay").close();
+    });
+
     dialog.showModal();
 }
 
