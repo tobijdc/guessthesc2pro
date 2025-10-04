@@ -11,7 +11,6 @@ enableEmoji = true
 # Anubis2
 rssAsSocialIcon = false
 locale = "en-us"
-toc = false
 
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
@@ -23,7 +22,6 @@ ignoreErrors = ["error-disable-taxonomy"]
   style = "light-without-switcher"
 
   showReadingTime = false
-  toc = false
 
   [params.header]
     logo = "logo.webp"
@@ -60,13 +58,17 @@ ignoreErrors = ["error-disable-taxonomy"]
 # Anubis2
 
 [params.anubis2]
+    tocWordCount = 0
+    readNextPosts = 0
     enableMathGlobally = false # MathJax (default is false)
     enableCopyCodeButton = false
     enableReadMoreButton = false
     hideFooterAttribution = false # hide "Powered by Hugo, theme" in footer
     colorTheme = "auto"
     enableColorThemeSwitcher = true
+    enableRssIcon = false
+    enableSummary = false
 
     customCSS = ["custom-css/custom.css"]
 
-social = []
+    socialIcons = []

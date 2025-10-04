@@ -32,10 +32,14 @@ StarCraft® is a trademarks or registered trademark of Blizzard Entertainment, I
 ## Changelog
 
 {{<details  "Changelog">}}
+- 2025-10-04
+  - Technical improvements
+    - Update dependencies
+    - Security improvements
 - 2025-04-13
   - Technical improvements
     - Switch to Anubis 2
-    - Update Dependencies
+    - Update dependencies
     - Dark mode
     - Meta descriptions
     - etc.

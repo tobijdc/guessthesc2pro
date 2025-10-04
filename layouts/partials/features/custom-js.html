@@ -1,0 +1,57 @@
+{{ $params := partial "params-helper.html" . }}
+
+{{ range $params.customJS }}
+    <!-- Support remote custom js -->
+    {{ if or (hasPrefix . "http") (hasPrefix . "https") }}
+      <script src="{{ . }}" crossorigin="anonymous" defer></script>
+      {{ continue }}
+    {{ end }}
+
+    <!-- Load local custom js -->
+    {{ $r := "" }}
+    {{ with resources.Get .  }}
+      {{ $r = . }}
+    {{ else }}
+      {{ errorf "Anubis2: You defined customJS, but './assets/%s' was not found, please check your config." . }}
+    {{ end }}
+
+    {{ if $r }}
+      {{ with $r | minify | fingerprint }}
+        <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+      {{ end }}
+    {{ end }}
+{{ end }}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.1.0/fuse.basic.min.js"
+    integrity="sha512-vBUkjPUol2ttHVXSBuFOqF4yOfqKxL6hnAuGS5dytyle9fxbB+lfaE1T5s+I8Aoe/xU5IuQd/wqS5Sv7lc7xgg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{{ $game := resources.Get "js/game.js" }}
+{{ $players400 := resources.Get "js/players400.js" }}
+{{ $players250 := resources.Get "js/players250.js" }}
+{{ $playersKatowice24 := resources.Get "js/playersKatowice24.js" }}
+
+{{ $jsHard := resources.Concat "js/bundle-hard.js" (slice $players400 $game) | minify | fingerprint }}
+{{ $jsKatowice24 := resources.Concat "js/bundle-katowice-24.js" (slice $playersKatowice24 $game) | minify | fingerprint }}
+{{ $js := resources.Concat "js/bundle.js" (slice $players250 $game) | minify | fingerprint }}
+
+{{ if eq .Layout "easy-mode"}}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ else if eq .Layout "katowice" }}
+    <script src="{{ $jsKatowice24.RelPermalink }}" integrity="{{ $jsKatowice24.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ else if eq .Layout "hard-mode" }}
+    <script src="{{ $jsHard.RelPermalink }}" integrity="{{ $jsHard.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ else if eq .Layout "daily" }}
+    <script src="{{ $jsHard.RelPermalink }}" integrity="{{ $jsHard.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/regular.min.css"
+    integrity="sha512-8hM9a+2hrLBhOuB3uiy+QIXBsu6Qk+snsP1CboFQW6pdt/yYz0IcDp/+CGv5m39r9doGUc/zw6aBpyLF6XFgzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+    integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+    integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
