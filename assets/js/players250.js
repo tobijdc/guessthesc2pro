@@ -9,7 +9,7 @@ var players = [
     "race": "Z",
     "rating": 3664,
     "position": 1,
-    "sum_earnings": 1851020
+    "sum_earnings": 1851070
   },
   {
     "id": 49,
@@ -45,7 +45,7 @@ var players = [
     "race": "Z",
     "rating": 2995,
     "position": 15,
-    "sum_earnings": 1068382
+    "sum_earnings": 1068454
   },
   {
     "id": 5878,
@@ -57,7 +57,7 @@ var players = [
     "race": "T",
     "rating": 3550,
     "position": 2,
-    "sum_earnings": 914305
+    "sum_earnings": 914605
   },
   {
     "id": 5414,
@@ -93,7 +93,7 @@ var players = [
     "race": "P",
     "rating": 3521,
     "position": 3,
-    "sum_earnings": 715711
+    "sum_earnings": 716612
   },
   {
     "id": 186,
@@ -105,7 +105,7 @@ var players = [
     "race": "P",
     "rating": 3285,
     "position": 8,
-    "sum_earnings": 690298
+    "sum_earnings": 690631
   },
   {
     "id": 63,
@@ -141,7 +141,7 @@ var players = [
     "race": "T",
     "rating": 3257,
     "position": 9,
-    "sum_earnings": 665621
+    "sum_earnings": 665977
   },
   {
     "id": 1658,
@@ -453,7 +453,7 @@ var players = [
     "race": "Z",
     "rating": 3056,
     "position": 13,
-    "sum_earnings": 282320
+    "sum_earnings": 282360
   },
   {
     "id": 22,
@@ -549,7 +549,7 @@ var players = [
     "race": "P",
     "rating": 2836,
     "position": 21,
-    "sum_earnings": 224585
+    "sum_earnings": 224605
   },
   {
     "id": 1659,
@@ -645,7 +645,7 @@ var players = [
     "race": "T",
     "rating": 2923,
     "position": 17,
-    "sum_earnings": 185981
+    "sum_earnings": 186001
   },
   {
     "id": 422,
@@ -765,7 +765,7 @@ var players = [
     "race": "P",
     "rating": 3435,
     "position": 5,
-    "sum_earnings": 151819
+    "sum_earnings": 151959
   },
   {
     "id": 72,
@@ -849,7 +849,7 @@ var players = [
     "race": "P",
     "rating": 2463,
     "position": 37,
-    "sum_earnings": 141078
+    "sum_earnings": 141203
   },
   {
     "id": 5087,
@@ -897,7 +897,7 @@ var players = [
     "race": "P",
     "rating": 2552,
     "position": 33,
-    "sum_earnings": 137494
+    "sum_earnings": 137509
   },
   {
     "id": 35,
@@ -981,7 +981,7 @@ var players = [
     "race": "Z",
     "rating": 2669,
     "position": 29,
-    "sum_earnings": 124098
+    "sum_earnings": 124148
   },
   {
     "id": 2053,
@@ -993,7 +993,7 @@ var players = [
     "race": "P",
     "rating": 3115,
     "position": 12,
-    "sum_earnings": 117517
+    "sum_earnings": 117567
   },
   {
     "id": 185,
@@ -1464,6 +1464,18 @@ var players = [
     "sum_earnings": 69973
   },
   {
+    "id": 8913,
+    "tag": "Gerald",
+    "name": "Mateusz Budziak",
+    "romanized_name": null,
+    "birthday": "1998-10-16",
+    "country": "PL",
+    "race": "P",
+    "rating": 2414,
+    "position": 39,
+    "sum_earnings": 65580
+  },
+  {
     "id": 95,
     "tag": "Happy (RU)",
     "name": "Дмитрий Костин",
@@ -1474,18 +1486,6 @@ var players = [
     "rating": 2033,
     "position": null,
     "sum_earnings": 65413
-  },
-  {
-    "id": 8913,
-    "tag": "Gerald",
-    "name": "Mateusz Budziak",
-    "romanized_name": null,
-    "birthday": "1998-10-16",
-    "country": "PL",
-    "race": "P",
-    "rating": 2414,
-    "position": 39,
-    "sum_earnings": 65023
   },
   {
     "id": 50,
@@ -1629,7 +1629,7 @@ var players = [
     "race": "T",
     "rating": 2389,
     "position": null,
-    "sum_earnings": 56921
+    "sum_earnings": 56943
   },
   {
     "id": 32,
@@ -1725,7 +1725,7 @@ var players = [
     "race": "P",
     "rating": 2242,
     "position": null,
-    "sum_earnings": 50785
+    "sum_earnings": 50858
   },
   {
     "id": 4388,
@@ -1941,7 +1941,7 @@ var players = [
     "race": "P",
     "rating": 2768,
     "position": 23,
-    "sum_earnings": 40630
+    "sum_earnings": 40645
   },
   {
     "id": 38,
@@ -2277,7 +2277,7 @@ var players = [
     "race": "Z",
     "rating": 2221,
     "position": 49,
-    "sum_earnings": 30390
+    "sum_earnings": 30446
   },
   {
     "id": 9846,
@@ -2529,7 +2529,7 @@ var players = [
     "race": "Z",
     "rating": 2496,
     "position": 36,
-    "sum_earnings": 25027
+    "sum_earnings": 25039
   },
   {
     "id": 112,

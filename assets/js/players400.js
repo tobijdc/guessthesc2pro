@@ -9,7 +9,7 @@ var players = [
     "race": "Z",
     "rating": 3664,
     "position": 1,
-    "sum_earnings": 1851020
+    "sum_earnings": 1851070
   },
   {
     "id": 49,
@@ -45,7 +45,7 @@ var players = [
     "race": "Z",
     "rating": 2995,
     "position": 15,
-    "sum_earnings": 1068382
+    "sum_earnings": 1068454
   },
   {
     "id": 5878,
@@ -57,7 +57,7 @@ var players = [
     "race": "T",
     "rating": 3550,
     "position": 2,
-    "sum_earnings": 914305
+    "sum_earnings": 914605
   },
   {
     "id": 5414,
@@ -93,7 +93,7 @@ var players = [
     "race": "P",
     "rating": 3521,
     "position": 3,
-    "sum_earnings": 715711
+    "sum_earnings": 716612
   },
   {
     "id": 186,
@@ -105,7 +105,7 @@ var players = [
     "race": "P",
     "rating": 3285,
     "position": 8,
-    "sum_earnings": 690298
+    "sum_earnings": 690631
   },
   {
     "id": 63,
@@ -141,7 +141,7 @@ var players = [
     "race": "T",
     "rating": 3257,
     "position": 9,
-    "sum_earnings": 665621
+    "sum_earnings": 665977
   },
   {
     "id": 1658,
@@ -453,7 +453,7 @@ var players = [
     "race": "Z",
     "rating": 3056,
     "position": 13,
-    "sum_earnings": 282320
+    "sum_earnings": 282360
   },
   {
     "id": 22,
@@ -549,7 +549,7 @@ var players = [
     "race": "P",
     "rating": 2836,
     "position": 21,
-    "sum_earnings": 224585
+    "sum_earnings": 224605
   },
   {
     "id": 1659,
@@ -645,7 +645,7 @@ var players = [
     "race": "T",
     "rating": 2923,
     "position": 17,
-    "sum_earnings": 185981
+    "sum_earnings": 186001
   },
   {
     "id": 422,
@@ -765,7 +765,7 @@ var players = [
     "race": "P",
     "rating": 3435,
     "position": 5,
-    "sum_earnings": 151819
+    "sum_earnings": 151959
   },
   {
     "id": 72,
@@ -849,7 +849,7 @@ var players = [
     "race": "P",
     "rating": 2463,
     "position": 37,
-    "sum_earnings": 141078
+    "sum_earnings": 141203
   },
   {
     "id": 5087,
@@ -897,7 +897,7 @@ var players = [
     "race": "P",
     "rating": 2552,
     "position": 33,
-    "sum_earnings": 137494
+    "sum_earnings": 137509
   },
   {
     "id": 35,
@@ -981,7 +981,7 @@ var players = [
     "race": "Z",
     "rating": 2669,
     "position": 29,
-    "sum_earnings": 124098
+    "sum_earnings": 124148
   },
   {
     "id": 2053,
@@ -993,7 +993,7 @@ var players = [
     "race": "P",
     "rating": 3115,
     "position": 12,
-    "sum_earnings": 117517
+    "sum_earnings": 117567
   },
   {
     "id": 185,
@@ -1464,6 +1464,18 @@ var players = [
     "sum_earnings": 69973
   },
   {
+    "id": 8913,
+    "tag": "Gerald",
+    "name": "Mateusz Budziak",
+    "romanized_name": null,
+    "birthday": "1998-10-16",
+    "country": "PL",
+    "race": "P",
+    "rating": 2414,
+    "position": 39,
+    "sum_earnings": 65580
+  },
+  {
     "id": 95,
     "tag": "Happy (RU)",
     "name": "Дмитрий Костин",
@@ -1474,18 +1486,6 @@ var players = [
     "rating": 2033,
     "position": null,
     "sum_earnings": 65413
-  },
-  {
-    "id": 8913,
-    "tag": "Gerald",
-    "name": "Mateusz Budziak",
-    "romanized_name": null,
-    "birthday": "1998-10-16",
-    "country": "PL",
-    "race": "P",
-    "rating": 2414,
-    "position": 39,
-    "sum_earnings": 65023
   },
   {
     "id": 50,
@@ -1629,7 +1629,7 @@ var players = [
     "race": "T",
     "rating": 2389,
     "position": null,
-    "sum_earnings": 56921
+    "sum_earnings": 56943
   },
   {
     "id": 32,
@@ -1725,7 +1725,7 @@ var players = [
     "race": "P",
     "rating": 2242,
     "position": null,
-    "sum_earnings": 50785
+    "sum_earnings": 50858
   },
   {
     "id": 4388,
@@ -1941,7 +1941,7 @@ var players = [
     "race": "P",
     "rating": 2768,
     "position": 23,
-    "sum_earnings": 40630
+    "sum_earnings": 40645
   },
   {
     "id": 38,
@@ -2277,7 +2277,7 @@ var players = [
     "race": "Z",
     "rating": 2221,
     "position": 49,
-    "sum_earnings": 30390
+    "sum_earnings": 30446
   },
   {
     "id": 9846,
@@ -2529,7 +2529,7 @@ var players = [
     "race": "Z",
     "rating": 2496,
     "position": 36,
-    "sum_earnings": 25027
+    "sum_earnings": 25039
   },
   {
     "id": 112,
@@ -3144,6 +3144,18 @@ var players = [
     "sum_earnings": 17043
   },
   {
+    "id": 19468,
+    "tag": "Percival",
+    "name": "정재영",
+    "romanized_name": "Jung Jae Yeong",
+    "birthday": "2002-03-28",
+    "country": "KR",
+    "race": "T",
+    "rating": 2732,
+    "position": 26,
+    "sum_earnings": 16881
+  },
+  {
     "id": 253,
     "tag": "anypro",
     "name": "이정환",
@@ -3154,18 +3166,6 @@ var players = [
     "rating": 1111,
     "position": null,
     "sum_earnings": 16829
-  },
-  {
-    "id": 19468,
-    "tag": "Percival",
-    "name": "정재영",
-    "romanized_name": "Jung Jae Yeong",
-    "birthday": "2002-03-28",
-    "country": "KR",
-    "race": "T",
-    "rating": 2732,
-    "position": 26,
-    "sum_earnings": 16811
   },
   {
     "id": 4455,
@@ -3432,6 +3432,18 @@ var players = [
     "sum_earnings": 13311
   },
   {
+    "id": 18651,
+    "tag": "Jumy",
+    "name": null,
+    "romanized_name": null,
+    "birthday": "2002-06-27",
+    "country": "DE",
+    "race": "P",
+    "rating": 2185,
+    "position": 51,
+    "sum_earnings": 13240
+  },
+  {
     "id": 2102,
     "tag": "Bails",
     "name": "Bailey Thomas",
@@ -3454,6 +3466,18 @@ var players = [
     "rating": 1259,
     "position": null,
     "sum_earnings": 13140
+  },
+  {
+    "id": 17623,
+    "tag": "Lemon",
+    "name": "陸敬央",
+    "romanized_name": "Lu Jingyang",
+    "birthday": null,
+    "country": "TW",
+    "race": "P",
+    "rating": 2270,
+    "position": 46,
+    "sum_earnings": 12964
   },
   {
     "id": 3608,
@@ -3480,18 +3504,6 @@ var players = [
     "sum_earnings": 12947
   },
   {
-    "id": 17623,
-    "tag": "Lemon",
-    "name": "陸敬央",
-    "romanized_name": "Lu Jingyang",
-    "birthday": null,
-    "country": "TW",
-    "race": "P",
-    "rating": 2270,
-    "position": 46,
-    "sum_earnings": 12920
-  },
-  {
     "id": 53,
     "tag": "fraer",
     "name": "Ігор Турчин",
@@ -3502,18 +3514,6 @@ var players = [
     "rating": 1544,
     "position": null,
     "sum_earnings": 12879
-  },
-  {
-    "id": 18651,
-    "tag": "Jumy",
-    "name": null,
-    "romanized_name": null,
-    "birthday": "2002-06-27",
-    "country": "DE",
-    "race": "P",
-    "rating": 2185,
-    "position": 51,
-    "sum_earnings": 12790
   },
   {
     "id": 7555,
@@ -3681,7 +3681,7 @@ var players = [
     "race": "Z",
     "rating": 1853,
     "position": 70,
-    "sum_earnings": 11613
+    "sum_earnings": 11635
   },
   {
     "id": 167,
@@ -4269,7 +4269,7 @@ var players = [
     "race": "P",
     "rating": 2552,
     "position": 34,
-    "sum_earnings": 8288
+    "sum_earnings": 8338
   },
   {
     "id": 962,
@@ -4476,6 +4476,18 @@ var players = [
     "sum_earnings": 7323
   },
   {
+    "id": 22004,
+    "tag": "Nanami",
+    "name": "王乐",
+    "romanized_name": "Wang Le",
+    "birthday": "2003-11-15",
+    "country": "CN",
+    "race": "P",
+    "rating": 1925,
+    "position": null,
+    "sum_earnings": 7307
+  },
+  {
     "id": 16991,
     "tag": "NightPhoenix",
     "name": "Олексій Захарчук",
@@ -4486,18 +4498,6 @@ var players = [
     "rating": 2066,
     "position": 55,
     "sum_earnings": 7303
-  },
-  {
-    "id": 22004,
-    "tag": "Nanami",
-    "name": "王乐",
-    "romanized_name": "Wang Le",
-    "birthday": "2003-11-15",
-    "country": "CN",
-    "race": "P",
-    "rating": 1925,
-    "position": null,
-    "sum_earnings": 7292
   },
   {
     "id": 2046,
@@ -4752,6 +4752,18 @@ var players = [
     "sum_earnings": 6533
   },
   {
+    "id": 5388,
+    "tag": "MindelVK",
+    "name": "Юрий Воюев",
+    "romanized_name": "Yuriy Voyuev",
+    "birthday": null,
+    "country": "RU",
+    "race": "P",
+    "rating": 1839,
+    "position": 72,
+    "sum_earnings": 6390
+  },
+  {
     "id": 10994,
     "tag": "Rob",
     "name": "Robert Plata",
@@ -4762,18 +4774,6 @@ var players = [
     "rating": 1797,
     "position": null,
     "sum_earnings": 6385
-  },
-  {
-    "id": 5388,
-    "tag": "MindelVK",
-    "name": "Юрий Воюев",
-    "romanized_name": "Yuriy Voyuev",
-    "birthday": null,
-    "country": "RU",
-    "race": "P",
-    "rating": 1839,
-    "position": 72,
-    "sum_earnings": 6378
   },
   {
     "id": 9087,
