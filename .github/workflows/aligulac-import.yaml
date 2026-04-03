@@ -30,8 +30,12 @@ jobs:
         run: sudo snap install yq --channel=v4/stable
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Fetch Aligulac DB URL
+        run: |
+          ALIGULAC_URL=$(curl -s https://aligulac.com/about/db/ | grep -oP 'https://aligulac-db-dumps.s3.amazonaws.com/aligulac.sql.gz\?[^"]+' | sed 's/&amp;/\&/g' | head -n 1)
+          echo "ALIGULAC_URL=$ALIGULAC_URL" >> $GITHUB_ENV
       - name: Download Aligulac dump
-        run: wget -qO- http://static.aligulac.com/aligulac.sql.gz | gzip -d > aligulac.sql
+        run: wget -qO- "$ALIGULAC_URL" | gzip -d > aligulac.sql
       - name: Modify dump for faster import
         run: rg --passthru "^CREATE TABLE" -r "CREATE UNLOGGED TABLE" aligulac.sql > aligulac2.sql
       - name: Modify dump for faster import 2
